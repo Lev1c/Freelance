@@ -1,0 +1,73 @@
+.portfolio {
+    margin-top: 0px;
+}
+
+.button-portfolio {
+    background: #FDEEEA;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ED502E;
+    cursor: pointer;
+    width: 262px;
+}
+
+.button-executorPortfolio a {
+    color: #ED502E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus-button {
+    font-size: 3rem;
+}
+
+.block-portfolio {
+    margin-top: 22px;
+    display:  flex;
+    flex-wrap: wrap;
+}
+
+.block-portf {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-executorPortfolio {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #FDEEEA;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    width: min-content;
+    min-width: 262px;
+    min-height: 216px;
+    height: auto;
+}
+
+.text-nameProject {
+    background-color: #FDEEEA;
+    font-size: 14px;
+    font-family: 'Gilroy';
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.img-modal-portf {
+    margin-bottom: 15px;
+}

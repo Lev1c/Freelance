@@ -1,0 +1,164 @@
+.edit-profile-block {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #DADAD9;
+}
+
+.radio-edit-profile-block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile-block-two {
+    margin-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #DADAD9;
+}
+
+.radio-edit-profile {
+    margin-top: 5px;
+    display: flex;
+}
+
+#left {
+    margin-left: 25px;
+}
+
+.add-name-input-two{
+    width: 44%;
+}
+
+.input-send-code-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.input-send-code {
+    position: relative;
+    top: -65px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9B9B9B;
+    border-bottom: 1px solid #9B9B9B;
+    padding: 8px 0px 3px 0px;
+    cursor: pointer;
+}
+
+.react-tel-input .special-label {
+    display: none;
+}
+
+input[type="date"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+  
+.button-title.button-redirect {
+    margin-right: 25px
+}
+
+.add-work-main .button-title {
+    margin-top: 5px;
+}
+
+.button-upload-label input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.button-upload-label input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.block-img-edit .button-edit {
+    width: 25%;
+    min-height: min-content;
+    height: auto;
+    padding: 0;
+}
+
+.button-edit-photo {
+    display: flex;
+    padding: 75px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-profile.edit {
+    width: 100%;
+}
+
+.text-valid {
+    color: #fa1010;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.button-title-three {
+    color: #FFFFFF;
+    padding: 8px 12px;
+    background: #ED502E;
+    border-radius: 6px;
+    transition: 0.1s;
+    border: 1px solid #ED502E;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.button-title-three:hover {
+    color: #ED502E;
+    padding: 8px 12px;
+    background: none;
+    border-radius: 6px;
+    transition: 0.1s;
+    border: 1px solid #ED502E;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.button-redirect-reg {
+    color: #9B9B9B;
+    border-bottom: 1px solid #9B9B9B;
+}
+
+.edit-profile-block-two .input-block-edit {
+    width: 48%;
+}
+
+.link-red {
+    color: #cf0202;
+    border-bottom: 1px solid #cf0202;
+}
+
+.block-button-upload:last-child {
+    height: 200px;
+}

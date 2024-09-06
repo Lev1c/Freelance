@@ -1,0 +1,136 @@
+.list-click {
+    width: 65%;
+    margin-top: 30px;
+}
+
+.block-list-click {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #BEC0C2;
+}
+
+.block-list-click:last-child {
+    border-bottom: none;
+}
+
+.info-block-list {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.list-user-info {
+    margin-left: 15px;
+}
+
+.list-user-info h2 {
+    color: #ED502E;
+    margin: 0;
+}
+
+.block-button-list-user {
+    margin-top: 20px;
+}
+
+.button-list-user {
+    background: #ED502E;
+    border: 1px solid #ED502E;
+    border-radius: 6px;
+    padding: 11px;
+    width: 30%;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-right: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.list-task-text-main-two {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;
+    margin: 15px;
+}
+
+.button-list-user:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.button-list-user-two {
+    background: #ED502E;
+    border: 1px solid #ED502E;
+    border-radius: 6px;
+    padding: 11px;
+    width: 30%;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-right: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button-list-user-two:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.list-task-user {
+    margin-top: 30px;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.price-list-user {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.about-list-user {
+    margin-top: 20px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #000101;
+}
+
+.block-img-list-click {
+    display: flex;
+    flex-direction: column;
+    min-height: 115px;
+    min-width: 115px;
+    width: 155px;
+}
+
+.img-list-click {
+    border-radius: 10px;
+    margin: auto;
+    max-height: 260px;
+    max-width: -webkit-fill-available;
+}

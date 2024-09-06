@@ -1,0 +1,65 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(media.css);
+
+/* Home */
+@import url(./home/search.css);
+@import url(./home/statistics.css);
+@import url(./home/сategories.css);
+@import url(./home/why.css);
+@import url(./home/work.css);
+
+
+/* Work */
+@import url(./work/search.css);
+@import url(./work/list.css);
+
+/* target */
+@import url(./target/target.css);
+@import url(./target/description.css);
+@import url(./target/listUser.css);
+@import url(./target/edit.css);
+
+/* specialist */
+@import url(./specialist/specialist.css);
+
+/* modal */
+@import url(./modal.css);
+
+/* profile */
+@import url(./profile/profile.css);
+@import url(./profile/main.css);
+@import url(./profile/education.css);
+@import url(./profile/portfolio.css);
+@import url(./profile/comment.css);
+@import url(./profile/experience.css);
+@import url(./profile/side.css);
+@import url(./profile/addwork.css);
+@import url(./profile/editprofile.css);
+
+/* register */
+@import url(./register/register.css);
+@import url(./register/skills.css);
+@import url(./register/user.css);
+
+
+/* chat */
+@import url(./chat/chat.css);
+@import url(./chat/chat-side.css);
+@import url(./chat/chat-message.css);
+
+/* wallet */
+@import url(./wallet/wallet.css);
+@import url(./wallet/balance.css);
+@import url(./wallet/history.css);
+
+/* task */
+@import url(./task/task.css);
+@import url(./task/task-list.css);
+
+/* task */
+@import url(./create/create.css);
+@import url(./create/map.css);
+
+
+@import url(./admin/admin.css);

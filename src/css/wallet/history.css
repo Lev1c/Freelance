@@ -1,0 +1,171 @@
+.history {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    margin-left: 30px;
+    width: 35%;
+    padding: 15px;
+    height: 100%;
+}
+
+.history h2{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.history-two h2{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.ul-side-history {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.list-side-history {
+    padding: 0;
+    padding-bottom: 5px;
+    display:  flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.history-pagination {
+    width: 99%;
+    margin-left: 2px;
+    height: 2px;
+    background: #D7D7D7;
+    margin-top: -2px;
+}
+
+.history-pag {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #ED502E;
+}
+
+
+.list-side-history button {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.history-card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D7D7D7;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.history-card-two {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.history-card:last-child {
+    border-bottom: none;
+}
+
+.history-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.history-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.history-close-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.info-text-under {
+    margin-top: 5px;
+    color: #646464;
+}
+
+.history-button {
+    background: none;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #000101;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.link-block {
+    display: flex;
+    text-align: center;
+}
+
+.history-button-two {
+    background: #ED502E;
+    border: 1px solid #ED502E;
+    border-radius: 6px;
+    padding: 15px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.history-button-two:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.history-two {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    margin-left: 30px;
+    width: 25%;
+    padding: 15px;
+    height: 100%;
+}
+
+.block-history-card {
+    padding-right: 12px;
+    height: auto;
+    overflow-x: auto;
+    max-height: 375px;
+}

@@ -1,0 +1,65 @@
+.balance {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    width: 20%;
+    padding: 15px;
+    height: 100%;
+}
+
+.balance h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.balance-button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: #ED502E;
+    border: 1px solid #ED502E;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.balance-button:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.balance-card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D7D7D7;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.balance-card:last-child {
+    border-bottom: none;
+}
+
+.balance-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.balance-close-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}

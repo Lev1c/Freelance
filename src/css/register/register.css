@@ -1,0 +1,306 @@
+.registration {
+    max-width: 980px;
+    margin: auto;
+}
+
+.pagination {
+    margin-top: 30px;
+    height: 6px;
+    background: #D1D1D1;
+    border-radius: 2px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.pag0 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 25%;
+}
+
+.pag1 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 45%;
+}
+
+.pag2 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 65%;
+}
+
+.pag3 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 85%;
+}
+
+.pag4 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 85%;
+}
+
+
+
+.btn-register {
+    background: #ED502E;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    display: flex;
+    padding: 8px 18px 8px 22px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s;
+    border: 1px solid #ED502E;
+}
+
+.btn-register:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.btn-register-disable {
+    background: #EEE9E7;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #B6B6BA;
+    line-height: 19px;
+    display: flex;
+    padding: 8px 18px 8px 22px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s;
+    border: 1px solid #B6B6BA;
+}
+
+.but-block {
+    display: flex;
+    margin-top: 60px;
+}
+
+.btn-register-two {
+    font-family: 'Gilroy';
+    border-radius: 6px;
+    border: 1px solid #ED502E;
+    background: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ED502E;
+    display: flex;
+    padding: 8px 22px 8px 18px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.btn-register-two:hover {
+    transition: 0.1s;
+    background: #ED502E;
+    color: #ffffff;
+}
+
+.btn-register-two-disabled {
+    font-family: 'Gilroy';
+    border-radius: 6px;
+    border: 1px solid #ED502E;
+    background: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ED502E;
+    display: flex;
+    padding: 8px 22px 8px 18px;
+    align-items: center;
+
+    transition: 0.1s;
+    opacity: 0.3;
+}
+
+.void {
+    display: none;
+}
+
+.where-icon {
+    margin-top: 65px
+}
+
+.where-input {
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 250%;
+}
+
+.where-input::placeholder {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9B9B9B;
+}
+
+.where-input[type="text"], textarea {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.where-block-input {
+    display: flex;
+    
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.email-button {
+    padding: 13px 20px 17px 20px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background: #ED502E;
+    border-radius: 6px;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 22px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.email-button:hover {
+    transition: 0.1s;
+    background: #C93919;
+}
+
+.textarea {
+    padding: 15px 15px;
+    margin-top: 15px;
+    width: 98%;
+    padding: 10px;
+    background: #F4F4F4;
+    border-radius: 6px;
+    border: none;
+    resize: none;
+    height: 125px;
+}
+
+.svg {
+    position: relative;
+    margin-right: 15px;
+}
+
+.svg-block {
+    
+}
+
+.counrty-block {
+    height: max-content;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 20%;
+    background-color: #FFFFFF;
+    border: 1px solid #DADAD9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    z-index: 15;
+}
+
+.block-none {
+    display: none;
+}
+
+.button-where {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #000101;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+.link-label {
+    border: none;
+    background: none;
+    color: #ED502E;
+    border-bottom: 1px solid #ED502E;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.1s;
+    line-height: 20px;
+}
+
+.input-date-input-error {
+    background: #FFEEEE;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+    width: 91%;
+}
+
+#datepicker-error {
+    background: #FFEEEE;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+    width: 91%;
+}
+
+.message-error.reg {
+    margin-top: -45px;
+}
+
+.error-email-reg {
+    margin-top: -15px;
+    margin-bottom: 27px;
+    color: #ED502E;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}

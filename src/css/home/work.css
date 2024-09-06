@@ -1,0 +1,116 @@
+.work {
+    margin-top: 110px;
+}
+
+.block-work {
+    margin-top: 54px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.work-main-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.work-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 300px;
+}
+
+.block-vector-work {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+}
+
+.vector-work {
+    padding: 5px 7px 5px 7px;
+}
+
+.work-arrow {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.work-arrow div {
+    position: relative;
+    top: 20px;
+    width: 180px;
+    height: 1px;
+    background-color: #ED502E;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    left: 0;
+    display: block;
+    border-radius: 10px;
+}
+.work-arrow div::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    top: 1px;
+    right: -1px;
+    background-color: #ED502E;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+    transform: rotate(-45deg);
+    border-radius: 5px;
+}
+.work-arrow div::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    top: -1px;
+    right: -1px;
+    background-color: #ED502E;
+    transform: rotate(45deg);
+    border-radius: 5px;
+}
+.work-arrow:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.work-one-text {
+    display: flex;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.work-one-text p {
+    color: #21AC55;
+    margin-right: 5px;
+}
+
+.work-two-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    margin-top: 2px;
+    width: 290px;
+}
+
+.block-img-vector {
+    display: flex;
+    align-items: flex-start;
+}

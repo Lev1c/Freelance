@@ -1,0 +1,146 @@
+.work-title-create {
+    margin-top: 50px;
+}
+
+.create {
+    margin-top: 50px;
+}
+
+.creates {
+    width: 50%;
+}
+
+.create-name-input{
+    background: #F4F4F4;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+    width: 96%;
+}
+
+.create-name-input::placeholder {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9B9B9B;
+}
+
+.create-name-input[type="text"], textarea {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.list-skills-two .link-dont {
+    border: none;
+    background: none;
+    padding: 0;
+    border-bottom: 1px solid #9B9B9B;
+}
+
+.create-work-title {
+    margin-bottom: 10px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.pagin0 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 20%;
+}
+
+.pagin1 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 35%;
+}
+
+.pagin2 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 50%;
+}
+
+.pagin3 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 65%;
+}
+
+.pagin4 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 78%;
+}
+
+.pagin5 {
+    background: #ED502E;
+    border-radius: 2px;
+    height: 6px;
+    width: 90%;
+}
+
+.create-work {
+    width: 980px;
+    min-height: 370px;
+}
+
+.skills-block {
+    display: flex;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.skills-text {
+    background: #FDEEEA;
+    border-radius: 36px;
+    margin-right: 10px;
+}
+
+.skills-text {
+    background: #FDEEEA;
+    border-radius: 36px;
+    margin-right: 10px;
+    display: flex;
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ED502E;
+    margin-bottom: 10px
+}
+
+.skills-text .button-text {
+    background: none;
+    border: none;
+    color: #ED502E;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.create-work-title {
+    font-size: 24px;
+}
+
+.radio-edit-block-two {
+    display: none;
+}
+
+.create .block-img-edit {
+    margin-top: 55px;
+    display: flex;
+}

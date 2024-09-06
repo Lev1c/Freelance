@@ -1,0 +1,37 @@
+.experience {
+    margin-top: 100px;
+}
+
+.experience-profile span {
+    display: flex;
+    
+}
+
+.span-experience {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.about-experience {
+    margin-top: 10px;
+}
+
+.exp-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.login-input-modal[type="text"]{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+}

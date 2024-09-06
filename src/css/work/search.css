@@ -1,0 +1,27 @@
+.work-search {
+    background: #242D30;;
+}
+
+.work-search-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+
+    color: #FFFFFF;
+    padding-top: 39px;
+    margin: 0;
+}
+
+.work-input-block {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.work-search-block .search {
+    margin-bottom: 45px;
+    width: 84%;
+}

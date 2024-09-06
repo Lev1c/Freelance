@@ -1,0 +1,240 @@
+.block-list-user-about {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #6B7280;
+    justify-content: space-between;
+}
+
+.modal-block-button {
+    display: flex;
+}
+
+.modal-button-adm {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    border:none;
+    background: #ED502E;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 99%;
+    transition: 0.1s;
+    border: 1px solid #ED502E;
+}
+
+.modal-button-adm:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.modal-button-two {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    border:none;
+    background: #ED502E;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 99%;
+    transition: 0.1s;
+    border: 1px solid #ED502E;
+}
+
+.modal-button-two:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.block-adm-list ul {
+    padding: 0;
+}
+
+.block-list-user-all {
+    margin-top: 25px;
+}
+
+.block-list-user {
+    display: flex;
+    margin-top: 40px;
+}
+
+.block-addit {
+    display: flex;
+}
+
+.block-list-adm {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 25px;
+}
+
+.block-list-user-info {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    flex-direction: column;
+}
+
+.block-list-user-info .block-list-user-about-li {
+    display: none;
+}
+
+.block-list-user-info:first-child .block-list-user-about-li {
+    display: block;
+}
+
+.block-list-user-about-li {
+    margin-bottom: 10px;
+}
+
+.block-list-user-info:first-child {
+    padding-top: 0;
+}
+
+.block-list-user-about-l {
+    margin-bottom: 10px;
+}
+
+.block-list-card {
+    width: 25%;
+}
+.block-list-card-two {
+    width: 25%;
+}
+
+.block-addit-none {
+    display: none;
+}
+
+.open-info {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ED502E;
+    margin-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.img-open-info {
+    transform: rotate(180deg);
+}
+
+.button-action-list-adm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-action-adm {
+    width: 20%;
+    padding: 10px 25px;
+    background: none;
+    border: 1px solid #242d30;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #242d30;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.1s;
+    margin-right: 15px;
+}
+
+.button-action-adm:hover {
+    padding: 8px 23px;
+    border: 2px solid #242d30;
+    transition: 0.1s;
+    color: #242d30;
+}
+
+.button-action-adm-two {
+    width: 25%;
+    padding: 10px 25px;
+    background: none;
+    border: 1px solid #ED502E;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.1s;
+    margin-top: 15px;
+}
+
+.button-action-adm-two:hover {
+    background-color: #ED502E;
+    color: white;
+    transition: 0.1s;
+}
+
+.block-list-card-three {
+    width: 100%;
+    word-break: break-all;
+}
+
+
+.button-main-adm {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background: #ED502E;
+    border-radius: 6px;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border: none;
+    /* margin-left: 16px; */
+    margin-bottom: 14px;
+    transition: 0.1s;
+    cursor: pointer;
+    border: 1px solid #ED502E;
+}
+
+.button-main-adm:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}

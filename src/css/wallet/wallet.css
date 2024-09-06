@@ -1,0 +1,142 @@
+.container-chat-two {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rate-block {
+   width: 120%;
+}
+
+.container-rate {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    width: 90%;
+    align-items: flex-start;
+}
+
+.history-three {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    margin-left: 30px;
+    width: 50%;
+    padding: 15px;
+}
+
+.history-three h2 {
+    margin-top: 0px;
+}
+
+.rate-block h1 {
+    margin-top: 0px;
+}
+
+.button-rate {
+    background: #F4F4F4;
+    border-radius: 8px;
+    border: none;
+    padding: 50px 33px;
+    width: 30%;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+    margin-top: 25px;
+    cursor: pointer;
+    margin-right: 20px;
+    word-wrap: break-word;
+}
+
+.block-feedback {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-rate:focus {
+    background: #FDEEEA;
+    color: #ED502E;
+}
+
+.button-rate:first-child {
+    margin-left: 0px;
+}
+
+.history-button-one {
+    background: #ED502E;
+    border: 1px solid #ED502E;
+    border-radius: 6px;
+    padding: 15px;
+    border: none;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    width: 100%;
+    cursor: pointer;
+}
+
+.history-button-one:hover {
+    background: white;
+    border: 1px solid #ED502E;
+    transition: 0.1s;
+    color: #ED502E;
+}
+
+.block-rate {
+    margin-bottom: 60px;
+}
+
+.link-rate {
+    margin-top: 30px;
+}
+
+.height-main-wallet {
+    min-height: 500px;
+}
+
+.history-info-none {
+    display: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+}
+
+
+.history-info-none:first-child {
+    display: none;
+}
+
+.history-card-none {
+    display: none;
+}
+
+.input-date-input.wallet {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 85%;
+}
+
+.input-date-input.wallet[type="text"], textarea {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.block-current {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate-info {
+    width: 100%;
+}

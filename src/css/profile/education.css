@@ -1,0 +1,39 @@
+.education {
+    margin-top: 100px;
+}
+
+.education-none {
+    display: flex;
+    margin-top: 15px;
+}
+
+.span-education {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.under-education {
+    margin-top: 2px;
+    color: #4E525A;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.education-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-under-education {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,88 @@
+.separation {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+}
+
+.profile-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+
+}
+
+.button-title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    color: #ED502E;
+    border-bottom: 1px solid #ED502E;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.button-upload-info {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+    color: #ED502E;
+    border-bottom: 1px solid #ED502E;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.main-profile {
+    display: flex;
+}
+
+.block-profile {
+    width: 75%;
+}
+
+.text-main-about {
+    width: 700px;
+    display: flex;
+}
+
+.text-main-about span {
+    width: 750px;
+}
+
+.login-block .input-block-edit:last-child {
+    margin-left: 0px;
+}
+
+.modal-input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal-block-edit {
+    width: 100%;
+}
+
+.ml-minus {
+    margin-left: -5px;
+}

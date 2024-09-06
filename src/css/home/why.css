@@ -1,0 +1,94 @@
+.why {
+    margin-top: 215px;
+    background: #21AC55;
+    height: 400px;
+}
+
+.block-why {
+    display: flex;
+    justify-content: space-between;
+}
+
+.why-main-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+
+.photo-why {
+    position: relative;
+    top: -105px
+}
+
+
+.why-ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+}
+
+.why-li {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.why-two-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 130%;
+    color: #90D6AA;
+}
+
+.why-three-text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+
+.why-button {
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 15px;
+    width: 60%;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    transition: 0.1s;
+}
+
+
+.why-button:hover {
+    background: #ececec;
+    transition: 0.1s;
+}
+
+.why-li:first-child .why-three-text {
+    margin-left: 15px;
+}

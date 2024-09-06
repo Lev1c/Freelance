@@ -1,0 +1,98 @@
+.reg-user-img {
+    margin: auto;
+    display: flex;
+}
+
+.reg-user-img-two {
+    margin: auto;
+    display: flex;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.user-search {
+    width: 96%;
+    background: #F4F4F4;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.user-info {
+    margin-top: 35px
+}
+
+.main-text-user {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.main-text-user {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.add-photo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    background: none;
+    border: none;
+    min-height: 250px;
+}
+
+.reg-user-img-add {
+    position: relative;
+    right: -10px;
+}
+
+.add-photo-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -20px;
+    right: -5px;
+    height: 40px;
+}
+
+.input-file-row {
+	display: inline-block;
+}
+
+.add-photo input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.add-photo input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+ 
+/* Список файлов */
+.input-file-list {
+	padding: 10px 0;
+}
+.input-file-list-item {
+	margin-bottom: 10px;
+}
+.input-file-list-remove {
+	color: red;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.add-photo.two {
+    cursor: pointer;
+}
