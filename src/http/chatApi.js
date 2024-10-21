@@ -8,7 +8,6 @@ export const getChatList = async (findKeywords) => {
             "findKeyword": findKeywords,
             token: token,
         })
-        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -23,7 +22,6 @@ export const getChatMessages = async (chatId) => {
             "chatId":chatId,
             token: token,
         })
-        console.log(data)
         return(data.response)
     } catch (e) {
         return(e)
@@ -39,7 +37,6 @@ export const sendChatMessage = async (chatId,message) => {
             "message": message,
             token: token,
         })
-        console.log(data)
         return(data.response)
     } catch (e) {
         return(e)
@@ -56,7 +53,6 @@ export const sendChatFile = async (chatId,nameFile,dataFile) => {
             "dataFile": dataFile,
             token: token,
         })
-        console.log(data)
         return(data.response)
     } catch (e) {
         return(e)

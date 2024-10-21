@@ -7,7 +7,6 @@ export const getWallet = async () => {
             "action":"getWallet", 
             token: token,
         })
-        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -21,7 +20,6 @@ export const getTariffs = async () => {
             "action":"getTariffs", 
             token: token,
         })
-        console.log(data)
         return(data.response)
 }
 
@@ -33,6 +31,5 @@ export const payTariff = async (tariffId) => {
             "tariffId":tariffId,
             token: token,
         })
-        console.log(data)
         return(data.response)
 }

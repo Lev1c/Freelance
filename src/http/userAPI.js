@@ -7,7 +7,7 @@ export const registration = async (login, pass) => {
             login, 
             pass, 
         })
-        console.log(data)
+        
         if (data.response.token) {
             localStorage.setItem('acting_token', data.response.token)
         }
@@ -36,7 +36,7 @@ export const registrationNext = async (name, middleName, surname, birthday, gend
             phone,
             token: token
         })
-        console.log(data)
+        
         localStorage.setItem('acting_token', data.response.token)
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         return(data.response)
@@ -74,7 +74,7 @@ export const getCity = async (regionId) => {
             "action":"getCity",
             "region": regionId
         })
-        console.log(data.response.data)
+        
         return(data.response.data)
     } catch(e) {
         return(e)
@@ -132,7 +132,7 @@ export const uploadImg = async (nameImg, imgUsers) => {
             token: token
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+        
         return(data)
     } catch(e) {
         return(e)
@@ -140,7 +140,7 @@ export const uploadImg = async (nameImg, imgUsers) => {
 }
 
 export const postConfirmPhone = async (phone) => {
-    console.log(phone)
+    
     try {
         const token = localStorage.getItem('acting_token')
         const {data} = await $host.post('/', {
@@ -156,7 +156,7 @@ export const postConfirmPhone = async (phone) => {
 
 export const confirmPhone = async (code) => {
     try {
-        console.log(code)
+        
         const token = localStorage.getItem('acting_token')
         const {data} = await $host.post('/', {
            "action":"confirmPhone",
@@ -164,7 +164,7 @@ export const confirmPhone = async (code) => {
             code: code
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+        
         return(data)
     } catch(e) {
         return(e)
@@ -179,7 +179,7 @@ export const postConfirmEmail = async () => {
             token: token,
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+        
         return(data)
     } catch(e) {
         return(e)
@@ -188,7 +188,7 @@ export const postConfirmEmail = async () => {
 
 export const confirmEmail = async (code) => {
     try {
-        console.log(code)
+        
         const token = localStorage.getItem('acting_token')
         const {data} = await $host.post('/', {
            "action":"confirmMail",
@@ -196,7 +196,7 @@ export const confirmEmail = async (code) => {
             code: code
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+        
         return(data)
     } catch(e) {
         return(e)
@@ -204,14 +204,13 @@ export const confirmEmail = async (code) => {
 }
 
 export const login = async (login, pass) => {
-    console.log(login)
     const {data} = await $host.post('', {
         "action":"login",
         login, 
         pass,
     })
     localStorage.setItem('info', JSON.stringify(data.response.profile))
-    console.log(data)
+    
     return(data)
 }
 
@@ -220,7 +219,7 @@ export const remindPassword = async (login) => {
         "action":"remindPassword", 
         login
     })
-    console.log(data)
+    
     return(data)
 }
 
@@ -232,7 +231,7 @@ export const updateT = async () => {
     })
     localStorage.setItem('token', data.response.token)
     localStorage.setItem('info', JSON.stringify(data.response.profile))
-    console.log(data)
+    
     return(data)
 }
 
@@ -241,7 +240,7 @@ export const getCityByName = async (cityName) => {
         "action":"getCityByName", 
         "cityName": cityName,
     })
-    console.log(data)
+    
     return(data)
 }
 
@@ -250,7 +249,7 @@ export const getSubTaskCategories = async (id) => {
         "action":"getSubTaskCategories", 
         "category":id
     })
-    console.log(data)
+    
     return(data)
 }
 
@@ -259,7 +258,7 @@ export const getSubTaskCategoriesByName = async (subCategoryName) => {
         "action":"getSubTaskCategoriesByName", 
         "subCategoryName":subCategoryName
     })
-    console.log(data)
+    
     return(data)
 }
 
@@ -270,6 +269,6 @@ export const offerTaskCategories = async (text) => {
         "name": text,
         token: token
     })
-    console.log(data)
+    
     return(data)
 }

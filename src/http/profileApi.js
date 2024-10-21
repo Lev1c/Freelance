@@ -9,10 +9,8 @@ export const getExecutorProfile = async () => {
 
     })
     localStorage.setItem('info', JSON.stringify(data.response.profile))
-    console.log(data)
     return(data)
     } catch (e) {
-        console.log(e)
         return(e.response.status)
     }
     
@@ -26,7 +24,6 @@ export const getCustomerProfile = async () => {
 
     })
     localStorage.setItem('info', JSON.stringify(data.response.profile))
-    console.log(data)
     return(data)
 }
 
@@ -45,7 +42,7 @@ export const editProfile = async (pass, name, middleName, surname, birthday, gen
             phone,
             token: token
         })
-        console.log(data)
+
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         localStorage.setItem('token', data.response.token)
         return(data.response)
@@ -62,7 +59,7 @@ export const editProfilePass = async (pass) => {
             pass, 
             token: token
         })
-        console.log(data)
+
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         return(data.response)
     } catch(e) {
@@ -79,7 +76,7 @@ export const editProfileAbout = async (about, aboutSkills) => {
             "about": about,
             "aboutSkills":aboutSkills
         })
-        console.log(data)
+
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         return(data.response)
     } catch(e) {
@@ -89,8 +86,6 @@ export const editProfileAbout = async (about, aboutSkills) => {
 
 export const uploadImgProfile = async (nameImg, imgUsers) => {
     try {
-        console.log(nameImg)
-        console.log(imgUsers)
         const token = localStorage.getItem('token')
         const {data} = await $host.post('/', {
             "action":"setProfileAvatar",
@@ -99,7 +94,6 @@ export const uploadImgProfile = async (nameImg, imgUsers) => {
             token: token
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
         return(data)
     } catch(e) {
         return(e)
@@ -122,7 +116,6 @@ export const postConfirmPhoneProfile = async (phone) => {
 
 export const confirmPhoneProfile = async (code) => {
     try {
-        console.log(code)
         const token = localStorage.getItem('token')
         const {data} = await $host.post('/', {
            "action":"confirmPhone",
@@ -130,7 +123,6 @@ export const confirmPhoneProfile = async (code) => {
             code: code
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
         return(data)
     } catch(e) {
         return(e)
@@ -138,7 +130,6 @@ export const confirmPhoneProfile = async (code) => {
 }
 
 export const setExecutorProfile = async (category,subCategory,typeExecutor,nameOrg,inn,regAddress,bankBik,bankAccount) => {
-    console.log(subCategory)
     try {
         const token = localStorage.getItem('token')
         const {data} = await $host.post('/', {
@@ -153,7 +144,7 @@ export const setExecutorProfile = async (category,subCategory,typeExecutor,nameO
             "bankAccount":bankAccount,
             "token": token,
         })
-        console.log(data)
+
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         return(data.response)
     } catch(e) {
@@ -171,7 +162,7 @@ export const uploadExecutorDoc = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             typeOfDoc: typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -188,7 +179,7 @@ export const uploadExecutorDoc2 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             typeOfDoc: typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -205,7 +196,7 @@ export const uploadExecutorDoc3 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             typeOfDoc: typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -222,7 +213,7 @@ export const uploadExecutorDoc4 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             typeOfDoc: typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -239,7 +230,7 @@ export const uploadExecutorDoc5 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             typeOfDoc: typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -261,8 +252,8 @@ export const addExecutorPortfolio = async (nameProject,descriptionProject, selec
             "photo3":preview3,
             token: token
         })
-        console.log(nameProject,descriptionProject,selectedFile2, preview2)
-        console.log(data)
+        
+
         return(data)
     } catch(e) {
         return(e)
@@ -277,7 +268,7 @@ export const removeExecutorPortfolio = async (portfolioId) => {
             "portfolioId":portfolioId,
             token: token
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -300,7 +291,7 @@ export const setExecutorPortfolio = async (portfolioId, nameProject,descriptionP
             "photo3":preview3,
             token: token
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -318,7 +309,7 @@ export const addExecutorExperience = async (nameExperience, descriptionExperienc
             "endExperience":endExperience, 
             token: token
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -337,7 +328,7 @@ export const setExecutorExperience = async (nameExperience, descriptionExperienc
             token: token,
             "experienceId":id
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -352,7 +343,7 @@ export const removeExecutorExperience = async (id) => {
             token: token,
             "experienceId":id
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -370,7 +361,7 @@ export const addExecutorEducation = async (nameExperience, descriptionExperience
             "endEducation":endExperience, 
             token: token
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -389,7 +380,7 @@ export const setExecutorEducation = async (nameEducation, descriptionEducation,s
             token: token,
             "educationId":id,
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -404,7 +395,7 @@ export const removeExecutorEducation = async (id) => {
             "educationId":id,
             token: token,
         })
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -424,7 +415,7 @@ export const setCustomerProfile = async (typeExecutor,nameOrg,inn,regAddress,ban
             "bankBik":bankBik,
             "bankAccount":bankAccount
         })
-        console.log(data)
+
         localStorage.setItem('info', JSON.stringify(data.response.profile))
         return(data.response)
     } catch(e) {
@@ -442,7 +433,7 @@ export const uploadCustomerDoc = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             "typeOfDoc": typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -459,7 +450,7 @@ export const uploadCustomerDoc2 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             "typeOfDoc": typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -476,7 +467,7 @@ export const uploadCustomerDoc3 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             "typeOfDoc": typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -493,7 +484,7 @@ export const uploadCustomerDoc4 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             "typeOfDoc": typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -502,7 +493,6 @@ export const uploadCustomerDoc4 = async (nameImg,imgUsers,typeOfDoc) => {
 
 export const uploadCustomerDoc5 = async (nameImg,imgUsers,typeOfDoc) => {
     try {
-        console.log(nameImg,imgUsers,typeOfDoc)
         const token = localStorage.getItem('token')
         const {data} = await $host.post('/', {
             "action":"uploadCustomerDoc", 
@@ -511,7 +501,7 @@ export const uploadCustomerDoc5 = async (nameImg,imgUsers,typeOfDoc) => {
             "dataFile":imgUsers,
             "typeOfDoc": typeOfDoc
         })
-        console.log(data)
+
         return(data.response)
     } catch(e) {
         return(e)
@@ -527,7 +517,7 @@ export const postConfirmEmailProfile = async (email) => {
             token: token,
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)
@@ -536,7 +526,6 @@ export const postConfirmEmailProfile = async (email) => {
 
 export const confirmEmailProfile = async (code) => {
     try {
-        console.log(code)
         const token = localStorage.getItem('token')
         const {data} = await $host.post('/', {
            "action":"confirmMail",
@@ -544,7 +533,7 @@ export const confirmEmailProfile = async (code) => {
             code: code
         })
         localStorage.setItem('info', JSON.stringify(data.response.profile))
-        console.log(data)
+
         return(data)
     } catch(e) {
         return(e)

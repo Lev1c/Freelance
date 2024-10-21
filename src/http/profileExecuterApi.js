@@ -22,14 +22,14 @@ export const getExecutorList = async (search, filterSubCategory, filterCategory,
 export const viewExecutorProfile = async (id) => {
     try {
         const token = localStorage.getItem('token')
-        console.log(id)
+        
         const {data} = await $host.post('', {
             "action":"viewExecutorProfile",
             "profileId": id,
             token: token
 
         })
-        console.log(data)
+        
     return(data)
     } catch (e) {
         return(e.response.status)
@@ -40,14 +40,14 @@ export const viewExecutorProfile = async (id) => {
 export const viewCustomerProfile = async (id) => {
     try {
         const token = localStorage.getItem('token')
-        console.log(id)
+        
         const {data} = await $host.post('', {
             "action":"viewCustomerProfile",
             "profileId": id,
             token: token
 
         })
-        console.log(data)
+        
     return(data)
     } catch (e) {
         return(e.response.status)

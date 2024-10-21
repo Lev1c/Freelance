@@ -29,14 +29,14 @@ i18n
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: LANG_LOCAL_STORAGE_KEY,
     },
-    debug: true, // Включаем отладочный режим для расширенного логирования
-    // Функция логгирования
-    logger: {
-      log: (level, namespace, key, args) => {
-        const value = i18n.t(key); // Получаем значение ключа
-        console.log(`[${level}] [${namespace}] Key: ${key}, Value: ${value}`); // Выводим в консоль расширенное сообщение
-      }
-    }
+    // debug: true, // Включаем отладочный режим для расширенного логирования
+    // // Функция логгирования
+    // logger: {
+    //   log: (level, namespace, key, args) => {
+    //     const value = i18n.t(key); // Получаем значение ключа
+    //     console.log(`[${level}] [${namespace}] Key: ${key}, Value: ${value}`); // Выводим в консоль расширенное сообщение
+    //   }
+    // }
   });
 
 export const changeLanguage = (language) => {

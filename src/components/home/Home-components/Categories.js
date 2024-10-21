@@ -12,7 +12,7 @@ function Categories() {
     const { user } = useContext(Context);
 
     const navigate = useNavigate();
-    const [category, setCategory] = useState()
+    const [category, setCategory] = useState([])
     const [taskCategories, setTaskCategories] = useState()
 
     useEffect(() => {
@@ -20,8 +20,7 @@ function Categories() {
     },[])
 
 
-    let listC = category && category
-    listC = listC && listC.filter((item) => {
+    let listC = category && category.filter((item) => {
       if (taskCategories && ! item.name.toLowerCase().includes(taskCategories.toLowerCase())) {
         return false;
       }
