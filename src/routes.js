@@ -23,7 +23,6 @@ import MainEditExecutor from "./components/profile/profile-components/mainEditEx
 import MainEdit from "./components/profile/profile-components/mainEdit";
 import MainEditCustomer from "./components/profile/profile-components/mainEditCustomer";
 import FeedBack from "./components/target/Targer-components/feedback";
-import Admin from "./components/admin/Admin";
 import ListUser from "./components/admin/admin-components/listUser";
 import ListUserCustomer from "./components/admin/customer/listUser";
 import ListUserExecutor from "./components/admin/executor/listUser";

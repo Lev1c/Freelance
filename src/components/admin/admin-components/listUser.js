@@ -57,6 +57,7 @@ const ListUser = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
+        // eslint-disable-next-line
       }, [displayCount, (list && list.users && list.users.length)]);
 
     return (

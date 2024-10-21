@@ -1,18 +1,10 @@
 import photo from '../../../assets/icon/Close_SM.png'
 
-import React, { useState} from 'react';
+
 import {observer} from "mobx-react-lite";
-import errors from '../../../assets/icon/error.png';
-import { useTranslation } from 'react-i18next';
 import { setUserLock } from '../../../http/adminApi';
 
 const ModalLock = observer(({activeTwo, setActiveTwo, infoUserOne}) => {
-    const { t } = useTranslation();
-    const [login, setLogin] = useState("")
-    const [infoMes, setInfoMes] = useState('')
-
-
-
    
     return (
         <div className={activeTwo ? "login active" : "login"} onMouseDown={() => setActiveTwo(false)}>

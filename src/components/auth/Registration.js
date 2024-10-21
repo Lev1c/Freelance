@@ -9,7 +9,6 @@ import arrowLeftSM from '../../assets/icon/Arrow_Left_SM.png'
 import arrowLeftSr from '../../assets/icon/Arrow_Left_Sr.png'
 import calendarIcon from '../../assets/icon/Calendar.png';
 import eyeIcon from '../../assets/icon/icon-eye.png';
-import Arrow_Left_SMm from '../../assets/icon/Arrow_Left_SMm.png'
 import error from '../../assets/icon/error.png'
 import { getCountry, getTaskCategories, registration, registrationNext, setExecutorProfileReg, uploadImg } from "../../http/userAPI";
 import { useTranslation } from "react-i18next";
@@ -360,7 +359,9 @@ const Registration = () => {
           {t('register.back')}
         </button>
         }
-        {(pageIndex === PAGES.length - 1) && (parseInfoUser && parseInfoUser.mailStatus == 1 || parseInfoUser && parseInfoUser.phoneStatus == 1 ) ?
+        
+        {// eslint-disable-next-line
+        (pageIndex === PAGES.length - 1) && (parseInfoUser && parseInfoUser.mailStatus == 1 || parseInfoUser && parseInfoUser.phoneStatus == 1 ) ?
             <button
               onClick={ async () => {
                 await registrationNext(name, middleName, surname, birthday, gender, listCountryId, listRegionId, listCityId,address, email,phone)

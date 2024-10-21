@@ -64,9 +64,6 @@ function List() {
           setTaskCategories(updatedFilterTypeOrder);
         }
     };
-    const getInfoUser = JSON.parse(localStorage.getItem('info'))
-
-    
 
     useEffect(() => {
         getExecutorList(search, filterSubCategory, taskCategories,filterCountFeedbackStart,filterCountFeedbackEnd,filterRate,listCityId, online)

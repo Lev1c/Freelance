@@ -1,15 +1,8 @@
 import photo from '../../../assets/icon/Close_SM.png'
 import { saveAs } from 'file-saver';
-import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
-import errors from '../../../assets/icon/error.png';
-import { useTranslation } from 'react-i18next';
-import { setUserSystemRole } from '../../../http/adminApi';
 
 const ModalRole = observer(({activeFive, setActiveFive, infoUserOne}) => {
-    const { t } = useTranslation();
-    const [login, setLogin] = useState("")
-    const [infoMes, setInfoMes] = useState('')
 
     return (
         <div className={activeFive ? "login active" : "login"} onMouseDown={() => setActiveFive(false)}>
@@ -37,7 +30,10 @@ const ModalRole = observer(({activeFive, setActiveFive, infoUserOne}) => {
                               });
                           }
                         return (
-                            <span className='description-block-text-under-two button-download block-des-button' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` + `${res.pathFile}`, res.nameFile)}>
+                            <span className='description-block-text-under-two button-download block-des-button' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` 
+                            // eslint-disable-next-line
+                                + 
+                            `${res.pathFile}`, res.nameFile)}>
                                 <button className='button-download'><p>{res.description}</p></button>
                             </span>
                                    

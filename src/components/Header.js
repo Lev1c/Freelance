@@ -240,14 +240,16 @@ const Header = observer(() => {
                           
                             <>
                             
-                            {resAdm && resAdm.userCount && resAdm.userCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.userCount && resAdm.userCount == -1 ?
                             ''
                             :
                             <li className='li-notice-two'>
                               <Link to='/admin/listuser'>Пользователи</Link>
                             </li>
                             }
-                            {resAdm && resAdm.customersRequestsCount && resAdm.customersRequestsCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.customersRequestsCount && resAdm.customersRequestsCount == -1 ?
                             ''
                             :
                               <li className='li-notice-two'>
@@ -259,7 +261,8 @@ const Header = observer(() => {
                                   }
                               </li>
                             }
-                            {resAdm && resAdm.executorsRequestsCount && resAdm.executorsRequestsCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.executorsRequestsCount && resAdm.executorsRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -272,7 +275,8 @@ const Header = observer(() => {
                                 
                               </li>
                             }
-                            {resAdm && resAdm.creditRequestsCount && resAdm.creditRequestsCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.creditRequestsCount && resAdm.creditRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -284,7 +288,8 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {resAdm && resAdm.insuranceRequestsCount && resAdm.insuranceRequestsCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.insuranceRequestsCount && resAdm.insuranceRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -296,7 +301,8 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {resAdm && resAdm.arbitrageCount && resAdm.arbitrageCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.arbitrageCount && resAdm.arbitrageCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -308,7 +314,8 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {resAdm && resAdm.categoriesCount && resAdm.categoriesCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.categoriesCount && resAdm.categoriesCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -320,7 +327,8 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {resAdm && resAdm.settingsCount && resAdm.settingsCount == -1 ?
+                            {// eslint-disable-next-line
+                            resAdm && resAdm.settingsCount && resAdm.settingsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>

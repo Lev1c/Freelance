@@ -6,14 +6,15 @@ import { useTranslation } from 'react-i18next';
 import { useContext, useEffect, useState } from 'react';
 import Login from '../../modal/Login';
 import ChangePass from '../../modal/ChangePass';
-import { findWork, getTaskCategories } from '../../../http/userAPI';
+import { findWork } from '../../../http/userAPI';
 import {Context} from "../../../index";
-import { TARGET_ROUTE, WORK_ROUTE } from '../../../utils/consts';
+import { WORK_ROUTE } from '../../../utils/consts';
 
 function Search() {
     const { user } = useContext(Context);
 
     const navigate = useNavigate();
+    // eslint-disable-next-line
     const [category, setCategory] = useState()
     const [taskCategories, setTaskCategories] = useState()
 
@@ -32,16 +33,6 @@ function Search() {
     let infoUser = JSON.parse(localStorage.getItem('info'))
 
 // eslint-disable-next-line
-    const [focused, setFocused] = useState(false)
-
-    const onFocus = () => setFocused(true)
-    const onBlur = () => setFocused(false)
-
-    const [active, setActive] = useState(false)
-
-     let changeOne = () => {
-        setActive(true)
-    }
 
     const handleInputKeyDown = (event) => {
         if (event.key === 'Enter') {

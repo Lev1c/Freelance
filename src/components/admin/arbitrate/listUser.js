@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getArbitrageRequests, getCreditRequests, getInsuranceRequests, getUsersAdm } from "../../../http/adminApi";
+import { getArbitrageRequests} from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -54,6 +54,7 @@ const ListUserArbit = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
+        // eslint-disable-next-line
       }, [displayCount, (list && list.arbitrageRequests && list.arbitrageRequests.length)]);
     return (
       <div className="">
@@ -146,16 +147,18 @@ const ListUserArbit = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Профиль Заказчика</li> 
                                                 </div>
-                                                <li>
+                                                <li>{// eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/customer/" + res.customerProfileId} target="_blank">Перейти</a>
+                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Профиль Исполнителя</li> 
                                                 </div>
-                                                <li>
+                                                <li>{// eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/executor/" + res.executorProfileId} target="_blank">Перейти</a>
+                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">

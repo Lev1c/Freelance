@@ -27,7 +27,7 @@ const Main = () => {
     setSelectedValue('all')
     setSelectedValueTwo(value);
   };
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     getMyOrders().then(data => setWork(data))

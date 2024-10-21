@@ -13,7 +13,7 @@ import { Context } from '../../..'
 import Login from '../../modal/Login'
 import ResponseToTask from '../../modal/ResponseToTask'
 import { Link, useParams } from 'react-router-dom'
-import { setAcceptOrder, setCloseOrder, setExecutorCompleteOrder, setPublicOrder,setDisputeOrder, setOrder, setOrderPhoto, deletePhoto } from '../../../http/orderApi'
+import { setAcceptOrder, setCloseOrder, setExecutorCompleteOrder, setPublicOrder,setDisputeOrder, setOrderPhoto, deletePhoto } from '../../../http/orderApi'
 import { useTranslation } from 'react-i18next'
 
 
@@ -343,7 +343,10 @@ function Description({descriptionInfo}) {
                                 return (
                                     // eslint-disable-next-line
                                     <>
-                                    <span className='description-block-text-under-two button-download' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` + `${res.pathFile}`, res.nameFile)}>
+                                    <span className='description-block-text-under-two button-download' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` 
+                                        // eslint-disable-next-line
+                                        +
+                                         `${res.pathFile}`, res.nameFile)}>
                                         <img src={photo3} alt='.' width={24}/>
                                         <button className='button-download'>{res.description}</button>
                                     </span>

@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 
 const EditProfileCustomer = ({userProfile}) => {
   const { t } = useTranslation();
-  let infoUser = JSON.parse(localStorage.getItem('info'))
+
   const [modalActive, setModalActive] = useState(false)
   
   const [image, setImage] = useState(photo);

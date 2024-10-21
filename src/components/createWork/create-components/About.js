@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import photo from '../../../assets/icon/upload.png'
-import { useState } from "react";
+
 
 function About({
     description, 
@@ -27,7 +27,6 @@ function About({
   }) {
   const { t } = useTranslation()
 
-  const [fille, setFille] = useState()
     return (
       <div className="create">
             <h1 className="create-work-title">{t('create-work.about.title')}</h1>

@@ -17,6 +17,7 @@ const SideChat = observer(({
         setSearch
     }) => {
         const [selectedValue, setSelectedValue] = useState('all');
+        // eslint-disable-next-line
   const [selectedValueTwo, setSelectedValueTwo] = useState('all');
 
   const handleButtonClick = (value) => {
@@ -27,6 +28,7 @@ const SideChat = observer(({
     const filterTasks = (chatLists) => {
         // eslint-disable-next-line
         if (selectedValue === 'all') {
+          // eslint-disable-next-line
           return chatLists.status == 1 || chatLists.status == 2 || chatLists.status == 3
         }
         if (selectedValue === 'completed') {
