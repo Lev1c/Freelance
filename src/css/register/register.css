@@ -294,13 +294,3 @@
 .message-error.reg {
     margin-top: -45px;
 }
-
-.error-email-reg {
-    margin-top: -15px;
-    margin-bottom: 27px;
-    color: #ED502E;
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-}

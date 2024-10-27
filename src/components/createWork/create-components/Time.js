@@ -17,7 +17,8 @@ function Time({setDateOne,dateOne,dateTwo,setDateTwo,selectedDate, setSelectedDa
       setDateTwo(formattedDate);
       setSelectedDateTwo(date);
     };
-
+    console.log(dateOne)
+    console.log(dateTwo)
     return (
       <div className="create">
             <h1 className="create-work-title">{t('create-work.time.title-one')}</h1>

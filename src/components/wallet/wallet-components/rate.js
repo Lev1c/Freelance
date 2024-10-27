@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 const Rate = ({listWorked}) => {
     const { t } = useTranslation();
     let current = listWorked.wallet.currentTariff
-
+    console.log(current)
     return (
       <div className="history-two">
           <h2>{t('wallet.rate.title')}</h2>

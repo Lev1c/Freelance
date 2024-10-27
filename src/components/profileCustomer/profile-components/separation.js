@@ -34,7 +34,7 @@ const Separation = observer(() => {
       )
     }
 
-
+    console.log(userProfile)
 
     return (
       <div className="container">

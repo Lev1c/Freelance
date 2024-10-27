@@ -56,7 +56,7 @@ const EditWork = () => {
     }
     // eslint-disable-next-line
     const getPortf = userProfile.response.executorPortfolio.filter(res => res.portfolioId == id)
-
+    console.log(getPortf.length)
     if(getPortf.length <= 0) {
       window.location.replace('/profile/user')
     }

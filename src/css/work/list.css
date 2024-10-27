@@ -155,14 +155,8 @@
     border: 1px solid #BEC0C2;
     border-radius: 7px;
     outline:none;
-    padding: 6px 23px 6px 42px;
+    padding: 6px 10px 6px 53px;
     width: 75%;
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    
 }
 
 .list-filter-work-input::placeholder {
@@ -397,11 +391,7 @@
 
 #btn1 {
     margin-left: 0;
-    margin-right: 10px;
-}
-
-.list-task-numbering-navigation:last-child {
-    margin-left: 10px;
+    margin-right: 20px;
 }
 
 .list-task-numbering-navigation {

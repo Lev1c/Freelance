@@ -1,6 +1,7 @@
 import AddPhoto from '../../../assets/icon/AddPhoto.png'
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import ru from 'date-fns/locale/ru';
 import { useTranslation } from "react-i18next";
 
 const User = ({value,activeMiddleName,activeGender,activeBirthday ,activeName, setGender, name, setName, middleName, setMiddleName, surname, setSurname, birthday, setBirthday, preview,imgUsers, handleFileChange}) => {
@@ -15,7 +16,6 @@ const User = ({value,activeMiddleName,activeGender,activeBirthday ,activeName, s
     
         // Учитываем месяц рождения и текущий месяц
         if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-            // eslint-disable-next-line
           age--;
         }
     

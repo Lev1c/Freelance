@@ -55,7 +55,7 @@ function Target() {
     <div className="target">
       <div className="target-back">
         <div className="none-mt container">
-          <p className="target-text">{descriptionInfo && descriptionInfo.order && descriptionInfo.order[0] && descriptionInfo.order[0].name}</p>
+          <p className="target-text">{descriptionInfo && descriptionInfo.order && descriptionInfo.order[0].name}</p>
           <div className="target-text-unde">
             <button
               className={`target-text-under ${
@@ -65,7 +65,7 @@ function Target() {
             >
               {t('target.target-back-one')}
             </button>
-            { descriptionInfo && descriptionInfo.order && descriptionInfo.order[0] && descriptionInfo.order[0].customer === -1 && descriptionInfo.order[0].status <= 1 ?
+            {descriptionInfo.order[0].customer === -1 && descriptionInfo.order[0].status <= 1 ?
               <button
                 className={`target-text-under ${
                   activeTab === "proposals" ? "active-description" : ""

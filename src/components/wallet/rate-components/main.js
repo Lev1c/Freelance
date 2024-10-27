@@ -33,7 +33,7 @@ const Main = () => {
     if(response3 && (response3.status === true)) {
       window.location.replace('/wallet')
     }
-
+    console.log(response3)
     return (
       <div className="container">
         <div className="container-chat-two">

@@ -3,6 +3,7 @@ import arrowLeftS from '../../assets/icon/Arrow_Left_S.png'
 import arrowLeftR from '../../assets/icon/Arrow_Left_R.png'
 import arrowLeftSM from '../../assets/icon/Arrow_Left_SM.png'
 import arrowLeftSr from '../../assets/icon/Arrow_Left_Sr.png'
+import Arrow_Left_SMm from '../../assets/icon/Arrow_Left_SMm.png'
 import Create from "./create-components/Create";
 import Map from "./create-components/Map";
 import Time from "./create-components/Time";
@@ -45,7 +46,7 @@ const CreateWork = () => {
 
   const [name, setName] = useState('')
   const [category, setCategory] = useState(0)
-
+  console.log(category)
   const [typeOrder, setTypeOrder] = useState(0)
   const [city, setCity] = useState()
   const [cityId, setCityId] = useState()
@@ -69,8 +70,6 @@ const CreateWork = () => {
   const [description, setDescription] = useState('')
 
   const [response, setResponse] = useState('')
-  // eslint-disable-next-line
-  const [active, setActive] = useState(false)
 
   const [getTaskCategoriess, setGetTaskCategories] = useState()
   const [taskCategories, setTaskCategories] = useState(0)
@@ -78,36 +77,18 @@ const CreateWork = () => {
   const [words, setWords] = useState();
   // eslint-disable-next-line
   const [getWords, setGetWords] = useState([]);
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState('');
 
   const [listWord, setListWord] = useState()
 
   const [loading, setLoading] = useState(true)
   const [imgUsers, setImgUser] = useState()
-
+  console.log(taskCategories)
   const [files, setFiles] = useState([])
-
+  console.log(files)
   const [selectedFile, setSelectedFile] = useState(null);
-  const [descriptionOne, setDescriptionOne] = useState()
   const [preview, setPreview] = useState();
 
-  const handleDescriptionChange = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionOne(updatedDescription);
-
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
-
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[0]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[0].description = updatedDescription;
-
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
-  
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -119,7 +100,7 @@ const CreateWork = () => {
         const base64StringImg = reader.result;
         setImgUser(base64StringImg);
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionOne}]);
+        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name}]);
         
       };
       reader.readAsDataURL(file);
@@ -132,26 +113,7 @@ const CreateWork = () => {
     
   };
 
-  const handleDescriptionChangeTwo = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionTwo(updatedDescription);
-
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
-
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[1]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[1].description = updatedDescription;
-
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
-
   const [imgUsers2, setImgUser2] = useState()
-
-  const [descriptionTwo, setDescriptionTwo] = useState()
 
   const [selectedFile2, setSelectedFile2] = useState(null);
   const [preview2, setPreview2] = useState();
@@ -167,7 +129,7 @@ const CreateWork = () => {
         const base64StringImg = reader.result;
         setImgUser2(base64StringImg);
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile2));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionTwo}]);
+        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name}]);
         
       };
       reader.readAsDataURL(file);
@@ -179,26 +141,7 @@ const CreateWork = () => {
     
   };
 
-  const handleDescriptionChangeThree = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionThree(updatedDescription);
-
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
-
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[2]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[2].description = updatedDescription;
-
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
-
   const [imgUsers3, setImgUser3] = useState()
-
-  const [descriptionThree, setDescriptionThree] = useState()
 
   const [selectedFile3, setSelectedFile3] = useState(null);
   const [preview3, setPreview3] = useState();
@@ -214,7 +157,7 @@ const CreateWork = () => {
         const base64StringImg = reader.result;
         setImgUser3(base64StringImg);
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile3));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionThree}]);
+        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name}]);
         
       };
       reader.readAsDataURL(file);
@@ -224,7 +167,7 @@ const CreateWork = () => {
       setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile3));
     }
   };
-
+  console.log(typeOrder)
   const createOde = async () => {
     await addOrder(name, taskCategories, typeOrder, words,typePlace,cityId,addressPlace,typeDate,dateOne,dateTwo,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,files) 
     .then((data) => setResponse(data))
@@ -271,12 +214,6 @@ const CreateWork = () => {
     }
   };
 
-  let infoUsers = JSON.parse(localStorage.getItem('info'))
-    
-  if (infoUsers && infoUsers.systemRole > 1) {
-    window.location.replace('/');
-  }
-
   const handleDelete = (index) => {
 
       const updatedWords = [...words];
@@ -290,10 +227,6 @@ const CreateWork = () => {
 
   if(response && response.response.status === true) {
     window.location.replace('/task')
-  }
-
-  const clc = () => {
-    createOde()
   }
 
   return (
@@ -376,16 +309,6 @@ const CreateWork = () => {
         setDateTwo={setDateTwo}
         listWord={listWord}
         setWords={setWords}
-        descriptionOne={descriptionOne}
-        setDescriptionOne={setDescriptionOne}
-        descriptionTwo={descriptionTwo}
-        setDescriptionTwo={setDescriptionTwo}
-        descriptionThree={descriptionThree}
-        setDescriptionThree={setDescriptionThree}
-        handleDescriptionChange={handleDescriptionChange}
-        handleDescriptionChangeTwo={handleDescriptionChangeTwo}
-        handleDescriptionChangeThree={handleDescriptionChangeThree}
-        active={active}
       />
       <div className="but-block">
         {pageIndex === 0 ?
@@ -415,8 +338,8 @@ const CreateWork = () => {
         }
         
         {(isChecked || pageIndex === PAGES.length - 1) ?
-          <button
-            onClick={clc}
+            <button
+            onClick={createOde}
             id="btn1"
             className="btn-register"
             onMouseEnter={() => setImageTwo(arrowLeftR)}

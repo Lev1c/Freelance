@@ -1,14 +1,23 @@
 import photo from '../../../assets/icon/Close_SM.png'
 
+import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
-import { removeSubTaskCategories} from '../../../http/adminApi';
+import errors from '../../../assets/icon/error.png';
+import { useTranslation } from 'react-i18next';
+import { removeSubTaskCategories, setTaskCategoriesModerate, setUserLock } from '../../../http/adminApi';
 
 const ModalDelete = observer(({activeSeven, setActiveSeven, infoUserThree}) => {
+    const { t } = useTranslation();
+    const [login, setLogin] = useState("")
+    const [infoMes, setInfoMes] = useState('')
+
+    console.log(infoUserThree)
 
 
+   
     return (
-        <div className={activeSeven ? "login active" : "login"} onMouseDown={() => setActiveSeven(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={activeSeven ? "login active" : "login"} onClick={() => setActiveSeven(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
             <div className="login-text">
                     <span>Внимание</span>
                     <button 

@@ -20,13 +20,12 @@ const ModalOffer = ({active, setActive, idUser,nameUser}) => {
         window.location.replace('/chat')
     }
     return (
-        <div className={active ? "login active" : "login"} onMouseDown={() => setActive(false)}>
-            <div className="login-block order" onMouseDown={e => e.stopPropagation()}>
+        <div className={active ? "login active" : "login"} onClick={() => setActive(false)}>
+            <div className="login-block order" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <div className='header-order-modal'>
-                        <span>{t('specialists.modal.two')} {nameUser}</span>
                         <span>{t('specialists.modal.one')}</span>
-                        {reply && <span className='response-message-modal'>{reply.response.message}</span>}
+                        <span>{t('specialists.modal.two')} {nameUser}</span>
                     </div>
                     <button 
                         onClick={() => setActive(false)} 
@@ -41,7 +40,6 @@ const ModalOffer = ({active, setActive, idUser,nameUser}) => {
                             <div className='block-list-order-modal'>
                                 <h3>{res.name}</h3>
                                 <button className='list-spec-button' onClick={() => hanldeSend(res.orderId)}>{t('specialists.modal.three')}</button>
-                                
                             </div>
                             
                         )

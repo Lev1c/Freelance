@@ -16,10 +16,6 @@
     padding-left: 0;
 }
 
-#button-list-user-id {
-    width: 73%;
-}
-
 .button-delete {
     border: none;
     background: none;
@@ -93,11 +89,6 @@
     margin-top: 14px;
     display: flex;
     align-items: flex-end;
-    
-}
-
-#button-targer-delete {
-    margin-right: 10px;
 }
 
 .description-block-text-under-two button {
@@ -107,7 +98,7 @@
     padding: 0;
     border-bottom: 1px solid #000000;
     margin-left: 5px;
-    margin-right: 2px;
+    margin-right: 15px;
     margin-bottom: 3px;
     color: #000000;
 }
@@ -300,15 +291,4 @@
 
 .button-download {
     cursor: pointer;
-    
-}
-
-.block-des-button {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.desctiption-button-download {
-    margin-left: 5px;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getArbitrageRequests} from "../../../http/adminApi";
+import { getArbitrageRequests, getCreditRequests, getInsuranceRequests, getUsersAdm } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -19,7 +19,7 @@ const ListUserArbit = () => {
     const [activeFive, setActiveFive] = useState(false)
     const [displayCount, setDisplayCount] = useState(10);
     const [infoUserOne, setInfoUserOne] = useState()
-
+    console.log(infoUserOne)
 
     if (list && list === 403) {
         window.location.replace('/')
@@ -54,7 +54,6 @@ const ListUserArbit = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.arbitrageRequests && list.arbitrageRequests.length)]);
     return (
       <div className="">
@@ -147,18 +146,16 @@ const ListUserArbit = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Профиль Заказчика</li> 
                                                 </div>
-                                                <li>{// eslint-disable-next-line
+                                                <li>
                                                     <a className="link-format-message" href={"/profile/customer/" + res.customerProfileId} target="_blank">Перейти</a>
-                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Профиль Исполнителя</li> 
                                                 </div>
-                                                <li>{// eslint-disable-next-line
+                                                <li>
                                                     <a className="link-format-message" href={"/profile/executor/" + res.executorProfileId} target="_blank">Перейти</a>
-                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
@@ -243,7 +240,7 @@ const ListUserArbit = () => {
                                          </div>
                                          <div className="block-list-card">
                                              <div className="block-list-user-about">
-                                                 <li className="block-list-user-about-l">Номер телефона Заказчика<br/> подтверждён</li> 
+                                                 <li className="block-list-user-about-l">Номер телефона Заказчика подтверждён</li> 
                                              </div>
                                              {res.customerValidatePhone === 1 && <li>Да</li>}
                                             {res.customerValidatePhone === 0 && <li>Нет</li>}

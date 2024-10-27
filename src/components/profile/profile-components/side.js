@@ -38,7 +38,7 @@ const Side = observer((userProfile) => {
 
     const date = userProfile.userProfile.response.executorProfile.length !== 0 ? (userProfile.userProfile.response.executorProfile.createDate || userProfile.userProfile.response.customerProfile.createDate) : ''
     const formattedDate = formatDate(date);
-
+    console.log(formattedDate);
 
     return (
     <>

@@ -18,7 +18,7 @@ const AuthEmail = observer(() => {
     } else {
         button = <button className='login-button email-auth-button' onClick={click}>Продолжить</button>
     }
-
+    console.log(infoMes)
     return (
         <div className="auth-pass">
             <div className="auth-pass-block">

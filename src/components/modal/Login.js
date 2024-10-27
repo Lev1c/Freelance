@@ -99,18 +99,10 @@ export const Login = observer(({active, setActive, setActiveTwo}) => {
     
 
 
-    const handleModalClick = (e) => {
-        e.stopPropagation(); // Предотвращаем закрытие модального окна при клике внутри
-    };
-
-    const toggleModal = () => {
-        setActive(false);
-    };
-
     return (
         
-        <div className={active ? "login active" : "login"}  onMouseDown={toggleModal}>
-            <div className="login-block" onMouseDown={handleModalClick}>
+        <div className={active ? "login active" : "login"} onClick={() => setActive(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <span>{t('modal.login.title')}</span>
                     <button 
@@ -131,7 +123,6 @@ export const Login = observer(({active, setActive, setActiveTwo}) => {
                         name="login"
                         required
                         onKeyDown={handleInputKeyDown1}
-                        
                     />
                     {error &&
                       <p className=

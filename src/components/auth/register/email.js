@@ -85,7 +85,7 @@ const Email = ({
                               setValue={email}
                               onChange={handleEmailChange}
                             />
-                            {!isValidEmail && <p className='error-email-reg'>{t('register.text-one')}</p>}
+                            {!isValidEmail && <p style={{ color: "red" }}>Некорректный формат email</p>}
                         </div>
                         <div className="input-block-edit">
                             <h4>{t('register.email.text-two')}</h4>
@@ -100,7 +100,7 @@ const Email = ({
                               />
                               
                               {isValidEmail && email  ?
-                              response && (response && response.response && response.response.status === true) ?
+                              response && ( response.response.status === true) ?
                                 
                                 <button className='input-send-code' onClick={clickConfirmEmail}>{t('register.email.button-one')}</button>
                                 :

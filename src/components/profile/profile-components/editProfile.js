@@ -40,7 +40,7 @@ const EditProfile = ({userProfile}) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [preview, setPreview] = useState('' || userProfile.response.profile.avatar);
     const [active, setActive] = useState(false)
-
+    console.log(email)
     const handleFileChange = (event) => {
       const file = event.target.files[0];
 
@@ -144,16 +144,15 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                 <div className="add-work-main">
                   <div>
                     <h1>{t('profile.editProfile.title')}</h1>
-                    <Link className='button-title button-redirect link-red' to={'/profile/edit-profile'}>{t('profile.editProfileCustomer.profile')}</Link>
                     {userProfile && userProfile.response.profile.customerStatus === 1 ? 
                       <Link className='button-title button-redirect' to={'/profile/edit-customer'}>{t('profile.editProfile.profile-customer')}</Link>
                       :
-                      <Link className='button-title button-redirect-reg button-redirect' to={'/profile/verification/customer'}>{t('profile.editProfile.profile-customer')}</Link>
+                      <></>
                     }
                     {userProfile && userProfile.response.profile.executerStatus === 1 ? 
-                      <Link className='button-title ' to={'/profile/edit-executor'}>{t('profile.editProfile.profile-executor')}</Link>
+                      <Link className='button-title' to={'/profile/edit-executor'}>{t('profile.editProfile.profile-executor')}</Link>
                       :
-                      <Link className='button-title button-redirect-reg' to={'/profile/verification/executor'}>{t('profile.editProfile.profile-executor')}</Link>
+                      <></>
                     }
                   </div>
                   <button onClick={logOut}>{t('profile.editProfile.logOut')}</button>
@@ -168,7 +167,7 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                               placeholder={t('profile.editProfile.text-input-one')}
                               value={name}
                               setValue={name}
-                              disabled
+                              onChange={(event)=> setName(event.target.value)}
                             />
                         </div>
                         <div className="input-block-edit">
@@ -179,7 +178,7 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                               placeholder={t('profile.editProfile.text-input-two')}
                               value={surname}
                               setValue={surname}
-                              disabled
+                              onChange={(event)=> setSurname(event.target.value)}
                             />
                         </div>
                     </div>
@@ -192,7 +191,7 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                               placeholder={t('profile.editProfile.text-input-three')}
                               value={middleName}
                               setValue={middleName}
-                              disabled
+                              onChange={(event)=> setMiddleName(event.target.value)}
                             />
                         </div>
                         <div className="input-block-edit">
@@ -205,7 +204,7 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                               maxDate={minDate} 
                               minDate={maxDate}
                               locale={ru}
-                              disabled
+                              onChange={(dateFormat) => setSelectedDate(dateFormat)}
                               dateFormat="dd.MM.yyyy"
                               placeholderText="25.12.1990"
                               showYearDropdown
@@ -316,7 +315,7 @@ maxDate.setFullYear(maxDate.getFullYear() - 100);
                                 setValue={codeTwo}
                                 onChange={(event)=> setCodeTwo(event.target.value)}
                               />
-
+                              {console.log(response)}
                               {userProfile.response.profile.mailStatus === 0 ?  
                                 response && (response.response.status === true )  ?
                                   <button className='input-send-code' onClick={clickConfirmEmail}>{t('register.email.button-one')}</button>

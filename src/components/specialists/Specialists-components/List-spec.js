@@ -226,7 +226,7 @@ const ListSpec = ({
                   }
                 };
 
-
+                console.log(response.birthday);
 
                 const birthDate = response.birthday;
                 const age = birthDate ? calculateAge(birthDate) : null;

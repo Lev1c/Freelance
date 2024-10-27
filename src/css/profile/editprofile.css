@@ -25,7 +25,7 @@
 }
 
 .add-name-input-two{
-    width: 44%;
+    width: 50%;
 }
 
 .input-send-code-block {
@@ -143,22 +143,4 @@ input[type="date"] {
     line-height: 19px;
     margin-bottom: 15px;
     cursor: pointer;
-}
-
-.button-redirect-reg {
-    color: #9B9B9B;
-    border-bottom: 1px solid #9B9B9B;
-}
-
-.edit-profile-block-two .input-block-edit {
-    width: 48%;
-}
-
-.link-red {
-    color: #cf0202;
-    border-bottom: 1px solid #cf0202;
-}
-
-.block-button-upload:last-child {
-    height: 200px;
 }

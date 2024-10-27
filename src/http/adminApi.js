@@ -7,6 +7,7 @@ export const getAdminNotify = async () => {
             "action":"getAdminNotify",
             token: token,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -24,6 +25,7 @@ export const getUsersAdm = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -38,6 +40,7 @@ export const setUserLock = async (id) => {
             token: token,
             "userId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -52,6 +55,7 @@ export const setUserUnLock = async (id) => {
             token: token,
             "userId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -67,6 +71,7 @@ export const setUserModeratorComment = async (text, id) => {
             "moderatorComment": text,
             "userId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -74,6 +79,7 @@ export const setUserModeratorComment = async (text, id) => {
 }
 
 export const setUserSystemRole = async (id, ide) => {
+    console.log(id, ide)
     try {
         const token = localStorage.getItem('token')
         const {data} = await $host.post('', {
@@ -82,6 +88,7 @@ export const setUserSystemRole = async (id, ide) => {
             "userId": id,
             "systemRole": ide
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -99,6 +106,7 @@ export const getCustomers = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -113,6 +121,7 @@ export const setCustomerValidateAccount = async (id) => {
             token: token,
             "profileId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -128,6 +137,7 @@ export const setCustomerModeratorComment = async (text, id) => {
             "moderatorComment": text,
             "profileId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -144,6 +154,7 @@ export const getExecutors = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -158,6 +169,7 @@ export const setExecutorValidateAccount = async (id) => {
             token: token,
             "profileId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -173,6 +185,7 @@ export const setExecutorModeratorComment = async (text, id) => {
             "moderatorComment": text,
             "profileId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -189,6 +202,7 @@ export const getCreditRequests = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -203,6 +217,7 @@ export const acceptCreditRequest = async (id) => {
             token: token,
             "orderId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -218,6 +233,7 @@ export const setOrderModeratorComment = async (text, id) => {
             "moderatorComment": text,
             "orderId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -234,6 +250,7 @@ export const getInsuranceRequests = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -248,6 +265,7 @@ export const acceptInsuranceRequests = async (id) => {
             token: token,
             "orderId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -264,6 +282,7 @@ export const getArbitrageRequests = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -278,6 +297,7 @@ export const closeArbitrage = async (id) => {
             token: token,
             "orderId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -293,6 +313,7 @@ export const getSettings = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -307,6 +328,7 @@ export const setSettings = async (info) => {
             token: token,
             "settings": info,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -324,6 +346,7 @@ export const getTaskCategoriesAdmin = async (search) => {
             token: token,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -338,6 +361,7 @@ export const setTaskCategoriesModerate = async (id) => {
             token: token,
             "taskCategoriesId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -352,6 +376,7 @@ export const removeTaskCategories = async (id) => {
             token: token,
             "taskCategoriesId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -367,6 +392,7 @@ export const changeTaskCategories = async (text, id) => {
             "name": text,
             "taskCategoriesId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -381,6 +407,7 @@ export const addTaskCategories = async (text) => {
             token: token,
             "name": text,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -398,6 +425,7 @@ export const getSubTaskCategoriesAdmin = async (id,search) => {
             "taskCategoriesId": id,
             "findKeyword": search
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -413,6 +441,7 @@ export const addSubTaskCategories = async (text, id) => {
             "name": text,
             "taskCategoriesId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -428,6 +457,7 @@ export const changeSubTaskCategories = async (text, id) => {
             "name": text,
             "subTaskCategoriesId": id
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)
@@ -442,6 +472,7 @@ export const removeSubTaskCategories = async (id) => {
             token: token,
             "subTaskCategoriesId": id,
         })
+        console.log(data)
         return(data.response)
     } catch (e) {
         return(e.response.status)

@@ -43,149 +43,93 @@ function Edit() {
     const [inputValue, setInputValue] = useState('');
     const [getTaskCategoriess, setGetTaskCategories] = useState()
     const [taskCategories, setTaskCategories] = useState()
-    const [activeFive, setActiveFive] = useState(false)
+
     const [loading, setLoading] = useState(true)
     const [imgUsers, setImgUser] = useState()
 
-  const [files, setFiles] = useState([])
+    const [files, setFiles] = useState([])
 
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [descriptionOne, setDescriptionOne] = useState()
-  const [preview, setPreview] = useState();
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [preview, setPreview] = useState();
 
-  const handleDescriptionChange = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionOne(updatedDescription);
+    const handleFileChange = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        setSelectedFile(file.name);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64String = reader.result.split(',')[1];
+          setPreview(base64String);
+          const base64StringImg = reader.result;
+          setImgUser(base64StringImg);
+          setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile));
+          setFiles(prevFile => [...prevFile, {idFile: getInfo && getInfo.documents[0] && getInfo.documents[0].idFile, dataFile: base64String, nameFile:file.name}]);
 
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
+        };
+        reader.readAsDataURL(file);
 
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[0]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[0].description = updatedDescription;
-
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
-  
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setSelectedFile(file.name);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result.split(',')[1];
-        setPreview(base64String);
-        const base64StringImg = reader.result;
-        setImgUser(base64StringImg);
+      } else {
+        setSelectedFile(null);
+        setPreview();
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionOne}]);
-        
-      };
-      reader.readAsDataURL(file);
-      
-    } else {
-      setSelectedFile(null);
-      setPreview();
-      setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile));
-    }
-    
-  };
+      }
 
-  const handleDescriptionChangeTwo = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionTwo(updatedDescription);
+    };
 
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
+    const [imgUsers2, setImgUser2] = useState()
 
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[1]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[1].description = updatedDescription;
+    const [selectedFile2, setSelectedFile2] = useState(null);
+    const [preview2, setPreview2] = useState();
 
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
+    const handleFileChange2 = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        setSelectedFile2(file.name);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64String = reader.result.split(',')[1];
+          setPreview2(base64String);
+          const base64StringImg = reader.result;
+          setImgUser2(base64StringImg);
+          setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile2));
+          setFiles(prevFile => [...prevFile, {idFile: getInfo && getInfo.documents[1] && getInfo.documents[1].idFile,dataFile: base64String, nameFile:file.name}]);
 
-  const [imgUsers2, setImgUser2] = useState()
-
-  const [descriptionTwo, setDescriptionTwo] = useState()
-
-  const [selectedFile2, setSelectedFile2] = useState(null);
-  const [preview2, setPreview2] = useState();
-
-  const handleFileChange2 = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setSelectedFile2(file.name);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result.split(',')[1];
-        setPreview2(base64String);
-        const base64StringImg = reader.result;
-        setImgUser2(base64StringImg);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        setSelectedFile2(null);
+        setPreview2();
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile2));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionTwo}]);
-        
-      };
-      reader.readAsDataURL(file);
-    } else {
-      setSelectedFile2(null);
-      setPreview2();
-      setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile2));
-    }
-    
-  };
+      }
 
-  const handleDescriptionChangeThree = (event) => {
-    const updatedDescription = event.target.value;
-    setDescriptionThree(updatedDescription);
+    };
 
-    // Создаем копию массива files, чтобы изменять состояние без мутаций
-    const updatedFiles = [...files];
+    const [imgUsers3, setImgUser3] = useState()
 
-    // Проверяем, существует ли объект с индексом 0 в массиве
-    if (updatedFiles[2]) {
-      // Обновляем description в объекте с индексом 0
-      updatedFiles[2].description = updatedDescription;
+    const [selectedFile3, setSelectedFile3] = useState(null);
+    const [preview3, setPreview3] = useState();
 
-      // Обновляем состояние массива files
-      setFiles(updatedFiles);
-    }
-  };
+    const handleFileChange3 = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        setSelectedFile3(file.name);
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64String = reader.result.split(',')[1];
+          setPreview3(base64String);
+          const base64StringImg = reader.result;
+          setImgUser3(base64StringImg);
+          setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile3));
+          setFiles(prevFile => [...prevFile, {idFile: getInfo && getInfo.documents[2] && getInfo.documents[2].idFile, dataFile: base64String, nameFile:file.name}]);
 
-  const [imgUsers3, setImgUser3] = useState()
-
-  const [descriptionThree, setDescriptionThree] = useState()
-
-  const [selectedFile3, setSelectedFile3] = useState(null);
-  const [preview3, setPreview3] = useState();
-
-  const handleFileChange3 = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setSelectedFile3(file.name);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result.split(',')[1];
-        setPreview3(base64String);
-        const base64StringImg = reader.result;
-        setImgUser3(base64StringImg);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        setSelectedFile3(null);
+        setPreview3();
         setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile3));
-        setFiles(prevFile => [...prevFile, {dataFile: base64String, nameFile:file.name, description: descriptionThree}]);
-        
-      };
-      reader.readAsDataURL(file);
-    } else {
-      setSelectedFile3(null);
-      setPreview3();
-      setFiles(prevFile => prevFile.filter(f => f.nameFile !== selectedFile3));
-    }
-  };
+      }
+    };
      useEffect(() => {
       if (cityName.trim() !== '') {
         getCityByName(cityName)
@@ -209,7 +153,7 @@ function Edit() {
 
     let getInfo = descriptionInfo && descriptionInfo.order[0]
     
-
+    console.log(files)
 
     useEffect(() => {
       setName(getInfo && getInfo.name)
@@ -228,17 +172,18 @@ function Edit() {
       setNeedInsurance(getInfo && getInfo.needInsurance)
       setNeedCredit(getInfo && getInfo.needCredit)
       setDescription(getInfo && getInfo.description)
+      setFiles(getInfo && getInfo.documents)
+      setSelectedFile(getInfo && getInfo.documents[0] && getInfo.documents[0].nameFile)
+      setPreview(getInfo && getInfo.documents[0] && getInfo.documents[0].pathFile)
+      setSelectedFile2(getInfo && getInfo.documents[1] && getInfo.documents[1].nameFile)
+      setPreview2(getInfo && getInfo.documents[1] && getInfo.documents[1].pathFile)
+      setSelectedFile3(getInfo && getInfo.documents[2] && getInfo.documents[2].nameFile)
+      setPreview3(getInfo && getInfo.documents[2] && getInfo.documents[2].pathFile)
     },[getInfo])
 
     const createOde = async () => {
-      if(!descriptionOne) {
-        setActiveFive(true)
-      } else {
-        await setOrder(id, name, taskCategories, typeOrder, words,typePlace,cityId,addressPlace,typeDate,dateOne,dateTwo,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,files) 
-        .then(() => {
-          window.location.reload()
-        })
-      }
+      await setOrder(id, name, taskCategories, typeOrder, words,typePlace,cityId,addressPlace,typeDate,dateOne,dateTwo,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,files) 
+      .then((data) => setResponse(data))
     }
     const closeOrder = async () => {
       setCloseOrder(id)
@@ -347,16 +292,6 @@ function Edit() {
               setCityId={setCityId}
               setDateOne={setDateOne}
               setDateTwo={setDateTwo}
-              descriptionOne={descriptionOne}
-              setDescriptionOne={setDescriptionOne}
-              descriptionTwo={descriptionTwo}
-              setDescriptionTwo={setDescriptionTwo}
-              descriptionThree={descriptionThree}
-              setDescriptionThree={setDescriptionThree}
-              handleDescriptionChange={handleDescriptionChange}
-              handleDescriptionChangeTwo={handleDescriptionChangeTwo}
-              handleDescriptionChangeThree={handleDescriptionChangeThree}
-              activeFive={activeFive}
             />
             <div className="button-right">
               <button className="edit-button-click" onClick={createOde}>{t('edit.save')}</button>

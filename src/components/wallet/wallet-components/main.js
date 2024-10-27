@@ -18,6 +18,8 @@ const Main = () => {
     if(info && info === 403) {
       window.location.replace('/')
     }
+    
+    console.log(info)
 
     const [activeButton, setAvtiveButton] = useState(false)
     const [selectedValue, setSelectedValue] = useState('all');

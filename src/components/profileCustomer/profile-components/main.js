@@ -194,7 +194,7 @@ const Main = observer((userProfile) => {
                                     </span>
                                     <span className='reviews'>({userProfile.userProfile.response.customerProfile.countRate} {t('profile.profile-user.rate')})</span>
                                 </div>
-                                <span className='info-user'>{t('profile.profile-user.done')}: {userProfile.userProfile.response.customerProfile.countRate} {t('profile.profile-user.task')}{getDeclension(userProfile.userProfile.response.customerProfile.countRate, taskArray)}</span>
+                                <span className='info-user'>{t('profile.profile-user.done')}: {getDeclension(userProfile.userProfile.response.customerProfile.countRate, taskArray)}</span>
                             </>
                             :
                             ''

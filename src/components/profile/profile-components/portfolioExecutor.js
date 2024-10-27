@@ -12,7 +12,7 @@ const PortfolioExecutor =  observer((userProfile) => {
     const {user} = useContext(Context)
     const [active, setActive] = useState(false)
     const [response, setResponse] = useState('')
-
+    console.log(response)
     return (
       <>
       {userProfile.userProfile.response.profile.executerStatus === 1 ?

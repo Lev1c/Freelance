@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getSettings} from "../../../http/adminApi";
+import { getCreditRequests, getInsuranceRequests, getSettings, getUsersAdm } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -19,7 +19,7 @@ const Settings = () => {
     const [displayCount, setDisplayCount] = useState(10);
 
     const [infoUserOne, setInfoUserOne] = useState()
-
+    console.log(infoUserOne)
 
     if (list && list === 403) {
         window.location.replace('/')
@@ -59,7 +59,6 @@ const Settings = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.settings && list.settings.length)]);
 
     return (

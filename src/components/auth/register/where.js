@@ -159,8 +159,9 @@ const Where = ({
                                     let click = () => {
                                         setCity(response.name)
                                         setActiveThree(false)
-                                        setListCityId(response.cityId)
+                                        setListCityId(response.id)
                                     }
+
                                        return (
                                             <button 
                                                 key={response.id} 

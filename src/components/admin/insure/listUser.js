@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getInsuranceRequests } from "../../../http/adminApi";
+import { getCreditRequests, getInsuranceRequests, getUsersAdm } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -65,7 +65,6 @@ const ListUserInsure = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.insuranceRequests && list.insuranceRequests.length)]);
 
     return (
@@ -164,10 +163,7 @@ const ListUserInsure = () => {
                                                     <li className="block-list-user-about-li">Профиль Заказчика</li> 
                                                 </div>
                                                 <li>
-                                                    {
-                                                    // eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/customer/" + res.customerProfileId} target="_blank">Перейти</a>
-                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
@@ -175,9 +171,7 @@ const ListUserInsure = () => {
                                                     <li className="block-list-user-about-li">Профиль Исполнителя</li> 
                                                 </div>
                                                 <li>
-                                                    {// eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/executor/" + res.executorProfileId} target="_blank">Перейти</a>
-                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
@@ -262,7 +256,7 @@ const ListUserInsure = () => {
                                          </div>
                                          <div className="block-list-card">
                                              <div className="block-list-user-about">
-                                                 <li className="block-list-user-about-l">Номер телефона Заказчика<br/>  подтверждён</li> 
+                                                 <li className="block-list-user-about-l">Номер телефона Заказчика подтверждён</li> 
                                              </div>
                                              {res.customerValidatePhone === 1 && <li>Да</li>}
                                             {res.customerValidatePhone === 0 && <li>Нет</li>}
@@ -310,8 +304,7 @@ const ListUserInsure = () => {
                                         }
                                         </div>
                                         <div className="button-action-list-adm">
-                                            {// eslint-disable-next-line
-                                            res.needInsurance == 2 ?
+                                            {res.needInsurance == 2 ?
                                             ""
                                             :
                                             <button className="button-action-adm" onClick={() => {

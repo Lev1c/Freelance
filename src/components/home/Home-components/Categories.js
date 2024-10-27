@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
+import exnernalink from '../../../assets/icon/External_Link.png'
 import { useTranslation } from 'react-i18next';
 import { useContext, useEffect, useState } from 'react';
 import { getTaskCategories } from '../../../http/userAPI';
@@ -9,10 +10,9 @@ import { animateScroll as scroll } from "react-scroll";
 function Categories() {
     const { t } = useTranslation();
     const { user } = useContext(Context);
-
+    console.log(user)
     const navigate = useNavigate();
-    const [category, setCategory] = useState([])
-    // eslint-disable-next-line
+    const [category, setCategory] = useState()
     const [taskCategories, setTaskCategories] = useState()
 
     useEffect(() => {
@@ -20,7 +20,8 @@ function Categories() {
     },[])
 
 
-    let listC = category && category.filter((item) => {
+    let listC = category && category
+    listC = listC && listC.filter((item) => {
       if (taskCategories && ! item.name.toLowerCase().includes(taskCategories.toLowerCase())) {
         return false;
       }
@@ -61,7 +62,7 @@ function Categories() {
                     }
                 </div>
                 <span className="categories-text-under">
-                    <Link to="/specialists" onClick={() => scrollToSection("section1")}>{t('home.categories.categories-text-under')}</Link>
+                    <Link to="/work" onClick={() => scrollToSection("section1")}>{t('home.categories.categories-text-under')}</Link>
                    
                 </span>
             </div>

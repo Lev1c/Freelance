@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next";
 const Modal = observer(({modalActive, setModalActive}) => {
     const { t } = useTranslation();
     return (
-        <div className={modalActive ? "login active" : "login"} onMouseDown={() => setModalActive(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={modalActive ? "login active" : "login"} onClick={() => setModalActive(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <span>{t('verif.modal.title-one')}</span>
                     <button 

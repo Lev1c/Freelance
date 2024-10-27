@@ -1,5 +1,5 @@
 .side-chat {
-    width: 280px;
+    width: 255px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     border-radius: 16px;
@@ -71,7 +71,7 @@
 }
 
 .chat-pagination {
-    width: 99%;
+    width: 252px;
     margin-left: 2px;
     height: 2px;
     background: #D7D7D7;
@@ -115,6 +115,7 @@
     margin-left: 5px;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 200px;
     align-items: center;
 }
 

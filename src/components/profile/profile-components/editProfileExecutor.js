@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next'
 
 const EditProfileExecutor = ({userProfile}) => {
   const { t } = useTranslation();
-
+  let infoUser = JSON.parse(localStorage.getItem('info'))
   const [modalActive, setModalActive] = useState(false)
 
   const [image, setImage] = useState(photo);
@@ -208,7 +208,7 @@ const EditProfileExecutor = ({userProfile}) => {
   let changeOne = () => {
       setActive(true)
   }
-
+  console.log(words)
   const clickPost = async () => {
     await setExecutorProfile(taskCategories,words,typeExecutor,nameOrg,inn,regAddress,bankBik,bankAccount,)
     await uploadExecutorDoc(selectedFile, preview, typeOfDoc)
@@ -232,15 +232,10 @@ const EditProfileExecutor = ({userProfile}) => {
                   <div>
                     <h1>{t('profile.editProfileExecutor.title')}</h1>
                     <Link className='button-title button-redirect' to={'/profile/edit-profile'}>{t('profile.editProfileCustomer.profile')}</Link>
-                    {userProfile && userProfile.response.profile.customerStatus === 1 ? 
-                      <Link className='button-title button-redirect' to={'/profile/edit-customer'}>{t('profile.editProfile.profile-customer')}</Link>
+                    {infoUser.customerStatus === 1 ? 
+                      <Link className='button-title' to={'/profile/edit-customer'}>{t('profile.editProfileExecutor.profileCustomer')}</Link>
                       :
-                      <Link className='button-title button-redirect-reg button-redirect' to={'/profile/verification/customer'}>{t('profile.editProfile.profile-customer')}</Link>
-                    }
-                    {userProfile && userProfile.response.profile.executerStatus === 1 ? 
-                      <Link className='button-title link-red' to={'/profile/edit-executor'}>{t('profile.editProfile.profile-executor')}</Link>
-                      :
-                      <Link className='button-title button-redirect-reg' to={'/profile/verification/executor'}>{t('profile.editProfile.profile-executor')}</Link>
+                      <></>
                     }
                   </div>
                 </div>
@@ -352,7 +347,7 @@ const EditProfileExecutor = ({userProfile}) => {
                                 return <option value={response.id}>{response.name}</option>
                             })}
                         </select>
-                        
+                        <a className='link-dont' href='/'>{t('verif.skills.text-one')}</a>
                     </div>
                     <div className="skills-search line">
                         <h4 className='mb'>{t('verif.skills.title-two')}</h4>

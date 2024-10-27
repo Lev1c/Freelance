@@ -26,8 +26,8 @@ export const ModalEducationModal = observer(({active, setActive,}) => {
     }
     return (
         
-        <div className={active ? "login active" : "login"} onMouseDown={() => setActive(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={active ? "login active" : "login"} onClick={() => setActive(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <span>{t('profile.education.title-two')}</span>
                     <button 

@@ -20,7 +20,7 @@ import { useTranslation } from 'react-i18next';
 import ModalHeader from './modal/ModalHeader';
 import { getEvents } from '../http/profileApi';
 import { getAdminNotify } from '../http/adminApi';
-import { animateScroll as scroll } from "react-scroll";
+
 
 const Header = observer(() => {
     const [modalActive, setModalActive] = useState(false)
@@ -58,10 +58,6 @@ const Header = observer(() => {
       setModalHeader(false)
       setModalActive(false)
     }
-
-    const scrollToSection = (sectionName) => {
-        scroll.scrollToBottom()
-      };
 
     const handleDocumentClick = (event) => {
       // Проверяем, что клик был не внутри вашего шапки
@@ -152,29 +148,24 @@ const Header = observer(() => {
                 <li className="item-post">
                   {infoUser ? 
                     <>
-                    {infoUser && infoUser.systemRole <= 1 &&
                       <Link to={infoUser.customerStatus === 0 ? "/profile/verification/customer" : '/create'}>
                         {t('header.create')}
                         </Link>
-                    }
                     </>
                   :
-                    <button className='' onClick={clickLogin}>{t('header.create')}</button>
+                  <button className='' onClick={clickLogin}>{t('header.create')}</button>
                   }
                 </li>
                 <li className="item-about"><Link to="/about">{t('header.about')}</Link></li>
-                <li className="item-about"><Link onClick={() => scrollToSection("section1")}>{t('header.how')}</Link></li>
+                <li className="item-about"><Link to="/how">{t('header.how')}</Link></li>
                 {user.isAuth ?
-                  infoUser && infoUser.systemRole <= 1 && <li className="item-about"><Link to="/task">{t('header.task')}</Link></li>
-                  :
-                  <></>
+                <li className="item-about"><Link to="/task">{t('header.task')}</Link></li>
+                :
+                <></>
                 }
               </ul>
               {user.isAuth ?
-              
               <div className="authorization">
-                {infoUser && infoUser.systemRole <= 1 &&
-                <>
                 <Link className='auth-link-profile' to={'/profile/user'}>
                   <li className="item-authorization"><img src={`http://194.67.113.55/` + infoUser.avatar} alt='.' className='img-header' width={24}/></li>
                   <li className="item-authorization mr-auth">{infoUser.name}</li>
@@ -189,8 +180,7 @@ const Header = observer(() => {
                     <img src={photo2} alt='.' width={24}/>
                   </Link>
                 </li>
-                </>
-                }
+
                 {infoUser.systemRole > 1 && 
                 <li className="item-authorization mr-auth" id="notice-header-two">
                   <button className='button-count' onClick={() => {
@@ -202,7 +192,7 @@ const Header = observer(() => {
                   </button>
                 </li>
                 }
-                {infoUser && infoUser.systemRole <= 1 &&
+
                 <li className="item-authorization mr-auth" id="notice-header">
                   <button className='button-count' onClick={() => {
                     handleModalButtonClick()
@@ -217,16 +207,6 @@ const Header = observer(() => {
                     }
                   </button>
                 </li>
-                }
-                <li className="item-authorization mr-auth" >
-                        <button className='button-count' onClick={() => {
-                          localStorage.removeItem('token')
-                          localStorage.removeItem('info')
-                          window.location.replace('/')
-                        }}>
-                          <img src={logout} alt='.' width={24}/>
-                        </button>
-                      </li>
                 
                 <select value={i18n.language} onChange={handleLanguageChange}>
                   <option value="RUS">RU</option>
@@ -240,16 +220,15 @@ const Header = observer(() => {
                           
                             <>
                             
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.userCount && resAdm.userCount == -1 ?
+                            {console.log(resAdm)}
+                            {resAdm && resAdm.userCount && resAdm.userCount == -1 ?
                             ''
                             :
                             <li className='li-notice-two'>
                               <Link to='/admin/listuser'>Пользователи</Link>
                             </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.customersRequestsCount && resAdm.customersRequestsCount == -1 ?
+                            {resAdm && resAdm.customersRequestsCount && resAdm.customersRequestsCount == -1 ?
                             ''
                             :
                               <li className='li-notice-two'>
@@ -261,8 +240,7 @@ const Header = observer(() => {
                                   }
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.executorsRequestsCount && resAdm.executorsRequestsCount == -1 ?
+                            {resAdm && resAdm.executorsRequestsCount && resAdm.executorsRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -275,8 +253,7 @@ const Header = observer(() => {
                                 
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.creditRequestsCount && resAdm.creditRequestsCount == -1 ?
+                            {resAdm && resAdm.creditRequestsCount && resAdm.creditRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -288,8 +265,7 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.insuranceRequestsCount && resAdm.insuranceRequestsCount == -1 ?
+                            {resAdm && resAdm.insuranceRequestsCount && resAdm.insuranceRequestsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -301,8 +277,7 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.arbitrageCount && resAdm.arbitrageCount == -1 ?
+                            {resAdm && resAdm.arbitrageCount && resAdm.arbitrageCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -314,8 +289,7 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.categoriesCount && resAdm.categoriesCount == -1 ?
+                            {resAdm && resAdm.categoriesCount && resAdm.categoriesCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>
@@ -327,8 +301,7 @@ const Header = observer(() => {
                                 }
                               </li>
                             }
-                            {// eslint-disable-next-line
-                            resAdm && resAdm.settingsCount && resAdm.settingsCount == -1 ?
+                            {resAdm && resAdm.settingsCount && resAdm.settingsCount == -1 ?
                             ''
                             :
                               <li  className='li-notice-two'>

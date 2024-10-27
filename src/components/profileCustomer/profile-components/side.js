@@ -23,7 +23,7 @@ const Side = observer((userProfile) => {
 
         let formattedDate = '';
         if (year === currentYear && date.getMonth() === currentMonth) {
-          formattedDate = `${t('profile.side.text-one')} ${month} ${year}`;
+          formattedDate = `${t('profile.side.text-one')} ${month}`;
         } else {
           formattedDate = `${t('profile.side.text-one')} ${month} ${year}`;
         }
@@ -33,7 +33,7 @@ const Side = observer((userProfile) => {
 
     const date = userProfile.userProfile.response.userProfile.createDate;
     const formattedDate = formatDate(date);
-
+    console.log(formattedDate);
 
     return (
     <>

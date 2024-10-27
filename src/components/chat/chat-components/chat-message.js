@@ -35,7 +35,7 @@ const ChatMessage = observer(({
         const container = containerRef.current;
         container && container.scrollTo(0, container.scrollHeight);
 
-
+        console.log(container)
         // eslint-disable-next-line
     }, [container,messageСheck,loadingChat]);
 
@@ -69,7 +69,7 @@ const ChatMessage = observer(({
     };
 
     const months = month;
-    
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
 
     const formatMessage = (message) => {
         const downloadPhoto = (url, name) => {
@@ -95,17 +95,12 @@ const ChatMessage = observer(({
               </a>
             );
           } else {
-            const validExtensions = [...fileExtensions, 'zip']; // Добавляем "zip" в список допустимых расширений
-            const fileExtension = validExtensions.find(ext => part.toLowerCase().endsWith(`.${ext}`));
-
+            const fileExtension = fileExtensions.find(ext => part.toLowerCase().endsWith(`.${ext}`));
             if (fileExtension) {
               return (
-                <span className='download-photo-chat' onClick={() => downloadPhoto(`http://194.67.113.55/` 
-                // eslint-disable-next-line
-                  + 
-                `${message}`, 'file')}>
-                  <img src={photo3} alt='.' width={24} className="mr-5"/>    
-                  {message.slice(10)}
+                <span className='download-photo-chat'onClick={() => downloadPhoto(`http://194.67.113.55/` + `${message}`, 'file')}>
+                    <img src={photo3} alt='.' width={24} className="mr-5"/>    
+                    {message}
                 </span>
               );
             } else {
@@ -137,11 +132,9 @@ const ChatMessage = observer(({
         // eslint-disable-next-line
       }, []); 
 
-    // eslint-disable-next-line
-    const [imgUsers, setImgUser] = useState()
-    // eslint-disable-next-line  
+      const [imgUsers, setImgUser] = useState()
+  
     const [selectedFile, setSelectedFile] = useState();
-    // eslint-disable-next-line
     const [preview, setPreview] = useState();
 
     const handleFileChange = (event) => {
@@ -181,7 +174,7 @@ const ChatMessage = observer(({
                         />
                         <div className="info-chat">
                             <h4>{infoUser.personName}</h4>
-                            {infoUser.personOnline === false ? 
+                            {infoUser.personOnline === true ? 
                                 <span>{t('chat.chat-message.offline')}</span> 
                                 : 
                                 <span>{t('chat.chat-message.online')}</span>
@@ -199,7 +192,7 @@ const ChatMessage = observer(({
                                     <Link to={'/target/' + infoUser.orderId}>{t('chat.chat-message.text-one')}</Link>
                                 </li>
                                 <li className="item-about mt">
-                                    <Link>Перейти в профиль</Link>
+                                    <Link>{t('chat.chat-message.text-two')}</Link>
                                 </li>
                             </ul>
                         </div>

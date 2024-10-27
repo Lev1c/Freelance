@@ -2,10 +2,14 @@ import photo from '../../../assets/icon/Close_SM.png'
 
 import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
+import errors from '../../../assets/icon/error.png';
+import { useTranslation } from 'react-i18next';
 import { setUserSystemRole } from '../../../http/adminApi';
 
 const ModalRole = observer(({activeFive, setActiveFive, infoUserOne}) => {
-
+    const { t } = useTranslation();
+    const [login, setLogin] = useState("")
+    const [infoMes, setInfoMes] = useState('')
     const arOptions = [
         { "id": 1, "name": "Пользователь" },
         { "id": 2, "name": "Кредитный менеджер" },
@@ -14,16 +18,16 @@ const ModalRole = observer(({activeFive, setActiveFive, infoUserOne}) => {
         { "id": 5, "name": "Администратор" }
       ];
       
-      const [valueId, setValueId] = useState(1); // Значение по умолчанию
+      const [valueId, setValueId] = useState(0); // Значение по умолчанию
 
       const handleChange = (e) => {
         const selectedValue = parseInt(e.target.value, 10); // Преобразовываем строку в число
         setValueId(selectedValue);
       };
-
+    console.log(valueId)
     return (
-        <div className={activeFive ? "login active" : "login"} onMouseDown={() => setActiveFive(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={activeFive ? "login active" : "login"} onClick={() => setActiveFive(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
             <div className="login-text">
                     <span>Внимание</span>
                     <button 

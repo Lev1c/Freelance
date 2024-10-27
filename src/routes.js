@@ -1,4 +1,4 @@
-import {MAIN_ROUTE, WORK_ROUTE, TARGET_ROUTE, SPECIALISTITS_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, CHAT_ROUTE, WALLET_ROUTE, TASK_ROUTE, EMAIL_ROUTE, EDIT_ROUTE, CREATE_ROUTE, RATE_ROUTE, ADDWORK_ROUTE, EDITPROFILE_ROUTE, EXECUTOR_PROFILE_ROUTE, CUSTOMER_PROFILE_ROUTE, VERIFICATIONexecutor_ROUTE, VERIFICATIONcustomer_ROUTE, EDITWORK_ROUTE, EDITPROFILEexecutor_ROUTE, EDITPROFILCustomer_ROUTE, FEEDBACK_ROUTE, ADMIN_LISTUSER_ROUTE, ADMIN_CUSTOMER_ROUTE, ADMIN_EXECUTOR_ROUTE, ADMIN_CREDIT_ROUTE, ADMIN_INSURE_ROUTE, ADMIN_ARBIT_ROUTE, ADMIN_SETTINGS_ROUTE, ADMIN_TASK_ROUTE} from "./utils/consts";
+import {MAIN_ROUTE, WORK_ROUTE, TARGET_ROUTE, SPECIALISTITS_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, CHAT_ROUTE, WALLET_ROUTE, TASK_ROUTE, EMAIL_ROUTE, EDIT_ROUTE, CREATE_ROUTE, RATE_ROUTE, ADDWORK_ROUTE, EDITPROFILE_ROUTE, EXECUTOR_PROFILE_ROUTE, CUSTOMER_PROFILE_ROUTE, VERIFICATIONexecutor_ROUTE, VERIFICATIONcustomer_ROUTE, EDITWORK_ROUTE, EDITPROFILEexecutor_ROUTE, EDITPROFILCustomer_ROUTE, FEEDBACK_ROUTE, ADMIN_ROUTE, ADMIN_LISTUSER_ROUTE, ADMIN_CUSTOMER_ROUTE, ADMIN_ECECUTOR_ROUTE, ADMIN_EXECUTOR_ROUTE, ADMIN_CREDIT_ROUTE, ADMIN_INSURE_ROUTE, ADMIN_ARBIT_ROUTE, ADMIN_SETTINGS_ROUTE, ADMIN_TASK_ROUTE} from "./utils/consts";
 
 import Home from './components/home/Home'
 import Work from "./components/work/Work.js";
@@ -23,6 +23,7 @@ import MainEditExecutor from "./components/profile/profile-components/mainEditEx
 import MainEdit from "./components/profile/profile-components/mainEdit";
 import MainEditCustomer from "./components/profile/profile-components/mainEditCustomer";
 import FeedBack from "./components/target/Targer-components/feedback";
+import Admin from "./components/admin/Admin";
 import ListUser from "./components/admin/admin-components/listUser";
 import ListUserCustomer from "./components/admin/customer/listUser";
 import ListUserExecutor from "./components/admin/executor/listUser";

@@ -21,8 +21,8 @@ const ResponseToTask = observer(({active, setActive}) => {
         window.location.reload()
     }
     return (
-        <div className={active ? "response active" : "response"} onMouseDown={() => setActive(false)}>
-            <div className="response-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={active ? "response active" : "response"} onClick={() => setActive(false)}>
+            <div className="response-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <span>{t('modal.toTask.title')}</span>
                     <button 

@@ -12,12 +12,9 @@ const SideChat = observer(({
         activeChatMobile,
         chatLists,
         setChatId,
-        setInfoUser,
-        search,
-        setSearch
+        setInfoUser
     }) => {
         const [selectedValue, setSelectedValue] = useState('all');
-        // eslint-disable-next-line
   const [selectedValueTwo, setSelectedValueTwo] = useState('all');
 
   const handleButtonClick = (value) => {
@@ -29,15 +26,15 @@ const SideChat = observer(({
         // eslint-disable-next-line
         if (selectedValue === 'all') {
           // eslint-disable-next-line
-          return chatLists.status == 1 || chatLists.status == 2 || chatLists.status == 3
+          return true
         }
         if (selectedValue === 'completed') {
           // eslint-disable-next-line
-          return chatLists.status == 4
+          return chatLists.status === 4
         }
         if (selectedValue === 'archive') {
           // eslint-disable-next-line
-          return chatLists.status == 5
+          return chatLists.status === 0
         }
         return true;
       };
@@ -45,14 +42,7 @@ const SideChat = observer(({
     return (
         <div className={`side-chat ${activeChatMobile === false ? "" : "side-chat-mobile"}`}>
             <div className="sad">
-                <input 
-                  className="input-side-chat" 
-                  type="text" 
-                  placeholder="Поиск"
-                  value={search}
-                  setValue={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                />
+                <input className="input-side-chat" type="text" placeholder="Поиск"/>
                 <span className="img-side-chat">
                     <img src={photo2} alt="." width={24}/>
                 </span>

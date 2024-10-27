@@ -12,8 +12,8 @@ function Document({needCloseDocuments,needInsurance,needCredit, handleCheckboxCh
                     type='checkbox' 
                     className="list-filter-input"
                     name='name5'
-                    value={0}
-                    setValue={0}
+                    value={1}
+                    setValue={1}
                     onChange={(event) => {
                         needAgreement === 0 ?
                             setNeedAgreement(1)
@@ -32,8 +32,8 @@ function Document({needCloseDocuments,needInsurance,needCredit, handleCheckboxCh
                     type='checkbox' 
                     className="list-filter-input"
                     name='name5'
-                    value={0}
-                    setValue={0}
+                    value={1}
+                    setValue={1}
                     onChange={(event) => {
                         needCloseDocuments === 0 ?
                             setNeedCloseDocuments(1)
@@ -51,8 +51,8 @@ function Document({needCloseDocuments,needInsurance,needCredit, handleCheckboxCh
                     id="checkbox_14" 
                     type='checkbox' 
                     className="list-filter-input"
-                    value={0}
-                    setValue={0}
+                    value={1}
+                    setValue={1}
                     onChange={(event) => {
                         needInsurance === 0 ?
                             setNeedInsurance(1)
@@ -70,8 +70,8 @@ function Document({needCloseDocuments,needInsurance,needCredit, handleCheckboxCh
                     type='checkbox' 
                     className="list-filter-input" 
                     id="checkbox_15"
-                    value={0}
-                    setValue={0}
+                    value={1}
+                    setValue={1}
                     onChange={(event) => {
                         needCredit === 0 ?
                             setNeedCredit(1)

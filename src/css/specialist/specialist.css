@@ -193,17 +193,9 @@
     color: #ff5252;
 }
 
-.response-message-modal {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #ff5252;
-}
-
 .image-avatar-block {
     max-width: 120px;
     max-height: 120px;
-    min-width: 120px;
-    min-height: 120px;
 }
 
 .image-avatar {

@@ -41,8 +41,8 @@ export const ModalEducationModalEdit = observer(({activeTwo, setActiveTwo, respo
     }, [responsee]);
     return (
         
-        <div className={activeTwo ? "login active" : "login"} onMouseDown={() => setActiveTwo(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={activeTwo ? "login active" : "login"} onClick={() => setActiveTwo(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <div className='exp-title'>
                         <span>{t('profile.education.title-three')}</span>

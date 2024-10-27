@@ -42,7 +42,7 @@ const Separation = observer(() => {
       }
     }, [loading, userProfile, taskCategories]);
 
-
+    console.log(matchedService);
 
     if (loading) {
       return (

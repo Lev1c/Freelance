@@ -32,12 +32,6 @@ const Separation = observer(() => {
       window.location.replace('/');
     }
 
-    let infoUser = JSON.parse(localStorage.getItem('info'))
-
-    if (infoUser && infoUser.systemRole > 1) {
-      window.location.replace('/');
-    }
-
     useEffect(() => {
       if (!loading && userProfile && taskCategories.length > 0) {
         const categoryId = userProfile.response.executorProfile.category;
@@ -46,7 +40,7 @@ const Separation = observer(() => {
       }
     }, [loading, userProfile, taskCategories]);
 
-
+    console.log(matchedService);
 
     if (loading) {
       return (

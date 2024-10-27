@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getExecutors } from "../../../http/adminApi";
+import { getCustomers, getExecutors, getUsersAdm } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -13,7 +13,7 @@ const ListUserExecutor = () => {
     useEffect(() => {
         getExecutors().then((data) => setList(data))
     },[])
-
+    console.log(list)
     const [activeTwo, setActiveTwo] = useState(false)
     const [activeThree, setActiveThree] = useState(false)
     const [activeFo, setActiveFo] = useState(false)
@@ -26,7 +26,7 @@ const ListUserExecutor = () => {
     const [taxpayerReg, settaxpayerReg] = useState()
 
     const [infoUserOne, setInfoUserOne] = useState()
-
+    console.log(infoUserOne)
 
     if (list && list === 403) {
         window.location.replace('/')
@@ -62,7 +62,6 @@ const ListUserExecutor = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.executors && list.executors.length)]);
 
     return (
@@ -119,16 +118,11 @@ const ListUserExecutor = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Тип Исполнителя</li> 
                                                 </div>
-                                                {// eslint-disable-next-line
-                                                res.typeExecutor == 0 && <li>тип Исполнителя </li>}
-                                                {// eslint-disable-next-line
-                                                res.typeExecutor == 1 && <li>Самозанятый</li>}
-                                                {// eslint-disable-next-line
-                                                res.typeExecutor == 2 && <li>ИП</li>}
-                                                {// eslint-disable-next-line
-                                                res.typeExecutor == 3 && <li>ООО</li>}
-                                                {// eslint-disable-next-line
-                                                res.typeExecutor == 4 && <li>АО</li>}
+                                                {res.typeExecutor == 0 && <li>тип Исполнителя </li>}
+                                                {res.typeExecutor == 1 && <li>Самозанятый</li>}
+                                                {res.typeExecutor == 2 && <li>ИП</li>}
+                                                {res.typeExecutor == 3 && <li>ООО</li>}
+                                                {res.typeExecutor == 4 && <li>АО</li>}
                                             </div>
                                         </div>
                                         <div className="block-list-user">
@@ -167,13 +161,11 @@ const ListUserExecutor = () => {
                                              <li>{res.validateAccountDate}</li>
                                          </div>
                                          <div className="block-list-card">
-                                            <div className="block-list-user-about">
-                                                <li className="block-list-user-about-l">Аккаунт верифицирован</li> 
-                                            </div>
-                                            {// eslint-disable-next-line
-                                            res.validateAccount == 1 && <li>Да</li>}
-                                            {// eslint-disable-next-line
-                                            res.validateAccount == 0 && <li>Нет</li>}
+                                             <div className="block-list-user-about">
+                                                 <li className="block-list-user-about-l">Аккаунт верифицирован</li> 
+                                             </div>
+                                             {res.validateAccount == 1 && <li>Да</li>}
+                                            {res.validateAccount == 0 && <li>Нет</li>}
                                          </div>
                                          <div className="block-list-card">
                                              <div className="block-list-user-about">

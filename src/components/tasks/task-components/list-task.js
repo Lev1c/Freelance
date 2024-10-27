@@ -103,7 +103,7 @@ const ListTask = ({ work, activeFilter, setActiveFilter, role, handleButtonClick
             .map(response => (
               <Link to={'/target/' + response.orderId} key={response.orderId} className='link-list-task'>
                 <div className='list-task-card'>
-
+                  {console.log(response)}
                   <div className='list-task-info'>
                     <h2>{response.name}</h2>
                     <span>{response.format}</span>
@@ -168,7 +168,7 @@ const ListTask = ({ work, activeFilter, setActiveFilter, role, handleButtonClick
             .map(response => (
               <Link to={'/target/' + response.orderId} key={response.orderId} className='link-list-task'>
                 <div className='list-task-card'>
-                  
+                  {console.log(response)}
                   <div className='list-task-info'>
                     <h2>{response.name}</h2>
                     <span>{response.format}</span>

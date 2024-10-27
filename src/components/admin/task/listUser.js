@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getSubTaskCategoriesAdmin, getTaskCategoriesAdmin } from "../../../http/adminApi";
+import { getSubTaskCategoriesAdmin, getTaskCategoriesAdmin, getUsersAdm } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -31,9 +31,17 @@ const ListUserTask = () => {
 
     const [displayCount, setDisplayCount] = useState(10);
 
+    console.log(infoUserOne)
+
     if (list && list === 403) {
         window.location.replace('/')
     }
+    const [expandedIndex, setExpandedIndex] = useState(-1);
+
+    const toggleAdditionalInfo = (index) => {
+      setExpandedIndex(prevIndex => (prevIndex === index ? -1 : index));
+    };
+    
 
     const handleButtonPostList = () => {
         list && list.taskCategoriesAdmin ?
@@ -69,7 +77,6 @@ const ListUserTask = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.taskCategoriesAdmin ? (list && list.taskCategoriesAdmin && list.taskCategoriesAdmin.length) : (list && list.subTaskCategoriesAdmin && list.subTaskCategoriesAdmin.length))]);
 
     return (
@@ -134,9 +141,7 @@ const ListUserTask = () => {
                                         </div>                                
                                         </div>
                                         <div className="button-action-list-adm">
-                                            
-                                            {// eslint-disable-next-line
-                                            res.moderate == 0 && 
+                                            {res.moderate == 0 && 
                                                 <button className="button-action-adm" onClick={() => {
                                                     setInfoUserOne(res.id)
                                                     setActiveTwo(true)

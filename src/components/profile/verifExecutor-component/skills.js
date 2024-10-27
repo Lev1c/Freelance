@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next";
-import ModalTwo from "./modalTwo";
 
 const Skills = ({changeFruit,handleInputChange,handleKeyPress,handleDelete,taskCategories,getTaskCategoriess,inputValue,listWord,setWords,words}) => {
   const { t } = useTranslation();
@@ -13,7 +12,6 @@ const Skills = ({changeFruit,handleInputChange,handleKeyPress,handleDelete,taskC
     let changeOne = () => {
         setActive(true)
     }
-    const [activeFo, setActiveFo] = useState(false)
     return (
         <div className="skills">
             <div className="list-skills-two skills-search line">
@@ -27,7 +25,7 @@ const Skills = ({changeFruit,handleInputChange,handleKeyPress,handleDelete,taskC
                         return <option value={response.id}>{response.name}</option>
                     })}
                 </select>
-                <button className='link-dont'onClick={() => setActiveFo(true)}>{t('verif.skills.text-one')}</button>
+                <a className='link-dont' href='/'>{t('verif.skills.text-one')}</a>
             </div>
             <div className="skills-search">
                 <h2>{t('verif.skills.title-two')}</h2>
@@ -80,7 +78,6 @@ const Skills = ({changeFruit,handleInputChange,handleKeyPress,handleDelete,taskC
                 )}
 
             </div>
-            <ModalTwo activeFo={activeFo} setActiveFo={setActiveFo}/>
         </div>
     )
 }

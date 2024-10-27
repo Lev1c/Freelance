@@ -36,7 +36,6 @@ function ListFilter({
         setActive(true)
     }
     const [clickChange, setClickChange] = useState(false)
-    // eslint-disable-next-line
     const [city, setCitys] = useState()
     return (
         <div className={activeFilter ? "list-filter-active" : "list-filter"}>

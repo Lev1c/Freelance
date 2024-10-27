@@ -9,6 +9,7 @@ import arrowLeftSM from '../../assets/icon/Arrow_Left_SM.png'
 import arrowLeftSr from '../../assets/icon/Arrow_Left_Sr.png'
 import calendarIcon from '../../assets/icon/Calendar.png';
 import eyeIcon from '../../assets/icon/icon-eye.png';
+import Arrow_Left_SMm from '../../assets/icon/Arrow_Left_SMm.png'
 import error from '../../assets/icon/error.png'
 import { getCountry, getTaskCategories, registration, registrationNext, setExecutorProfileReg, uploadImg } from "../../http/userAPI";
 import { useTranslation } from "react-i18next";
@@ -80,7 +81,7 @@ const Registration = () => {
   const [codeTwo, setCodeTwo] = useState('')
   const [response, setResponse] = useState()
   const [response2, setResponse2] = useState()
-  
+
   const [modalActive, setModalActive] = useState(false)
 
   const [tok, setTok] = useState(false)
@@ -98,7 +99,7 @@ const Registration = () => {
   const goBack = () => {
     setPageIndex(pageIndex - 1)
   }
-
+  console.log()
   const goForward = () => {
     if((pageIndex === 0 && name === '') || (pageIndex === 0 && surname === '') || (pageIndex === 0 && birthday === '') || (pageIndex === 0 && gender === '')) {
       setPageIndex(0)
@@ -173,7 +174,7 @@ const Registration = () => {
       parseInfoUser = JSON.parse(infoUser)
   }
   let acting_toke = localStorage.getItem('acting_token');
-
+  console.log(activeClick)
   useEffect(() => {
     if (
       // eslint-disable-next-line
@@ -359,9 +360,7 @@ const Registration = () => {
           {t('register.back')}
         </button>
         }
-        
-        {// eslint-disable-next-line
-        (pageIndex === PAGES.length - 1) && (parseInfoUser && parseInfoUser.mailStatus == 1 || parseInfoUser && parseInfoUser.phoneStatus == 1 ) ?
+        {(pageIndex === PAGES.length - 1) && (parseInfoUser && parseInfoUser.mailStatus == 1 || parseInfoUser && parseInfoUser.phoneStatus == 1 ) ?
             <button
               onClick={ async () => {
                 await registrationNext(name, middleName, surname, birthday, gender, listCountryId, listRegionId, listCityId,address, email,phone)

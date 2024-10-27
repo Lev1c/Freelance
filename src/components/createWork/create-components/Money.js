@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 function Money({startCost, setStartCost,endCost, setEndCost,setTypePayments,typePayments}) {
     const { t } = useTranslation();
-
+    console.log(typePayments)
     return (
     <div>
         <div className="work-title-create">

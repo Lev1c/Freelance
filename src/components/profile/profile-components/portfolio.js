@@ -7,7 +7,7 @@ const Portfolio =  observer((userProfile) => {
     const { t } = useTranslation();
     const [active, setActive] = useState(false)
     const [response, setResponse] = useState('')
-
+    console.log(response)
     return (
       <>
       {userProfile.userProfile.response.profile.executerStatus === 1 ?

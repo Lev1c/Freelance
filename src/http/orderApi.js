@@ -2,6 +2,7 @@ import {$host} from "./index";
 
 export const getOrderList = async (filterTypePlace,filterTypeOrder,city,filterCategory,filterStartCost,filterEndCost,filterFindKeyword,value) => {
     try {
+        console.log(filterTypePlace,filterTypeOrder,city,filterCategory,filterStartCost,filterEndCost,filterFindKeyword,value)
         const {data} = await $host.post('', {
             "action":"getOrderList",
             "filterTypePlace":filterTypePlace,
@@ -13,6 +14,7 @@ export const getOrderList = async (filterTypePlace,filterTypeOrder,city,filterCa
             "filterFindKeyword": filterFindKeyword,
             "filterSort":value,
         })
+        console.log(data.response.order)
         return(data.response.order)
     } catch(e) {
         return e
@@ -27,6 +29,7 @@ export const viewOrder = async (id) => {
             "orderId":id,
             token: token,
         })
+        console.log(data.response)
         return(data.response)
     } catch(e) {
         return(e.response.status)
@@ -37,12 +40,14 @@ export const viewOrder = async (id) => {
 export const deletePhoto = async (idFile,id) => {
     try {
          const token = localStorage.getItem('token')
+         console.log(idFile,id)
         const {data} = await $host.post('', {
             "action":"removeOrderFile",
             "idFile":idFile,
             "orderId":id,
             token: token,
         })
+        console.log(data.response)
         return(data.response)
     } catch(e) {
         return(e.response.status)
@@ -52,6 +57,7 @@ export const deletePhoto = async (idFile,id) => {
 
 export const addOrder = async (name, category, typeOrder,subCategory, typePlace,city,addressPlace,typeDate,startDate,endDate,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,time) => {
     const token = localStorage.getItem('token')
+    console.log(name, category, typeOrder,subCategory, typePlace,city,addressPlace,typeDate,startDate,endDate,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,time)
     const {data} = await $host.post('', {
         "action":"addOrder",
         "name":name,
@@ -75,10 +81,12 @@ export const addOrder = async (name, category, typeOrder,subCategory, typePlace,
         "documents":time,
         token: token,
     })
+    console.log(data)
     return(data)
 }
 
 export const setOrder = async (id, name, category, typeOrder,subCategory, typePlace,city,addressPlace,typeDate,startDate,endDate,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,files) => {
+    console.log(id, name, category, typeOrder,subCategory, typePlace,city,addressPlace,typeDate,startDate,endDate,startCost,endCost,typePayments,needAgreement,needCloseDocuments,needInsurance,needCredit,description,files)
     const token = localStorage.getItem('token')
     const {data} = await $host.post('', {
         "action":"setOrder",
@@ -104,12 +112,12 @@ export const setOrder = async (id, name, category, typeOrder,subCategory, typePl
         "documents":files,
         token: token,
     })
-
+    console.log(data)
     return(data)
 }
 
 export const setOrderPhoto = async (id,files) => {
-
+    console.log(id, files)
     const token = localStorage.getItem('token')
     const {data} = await $host.post('', {
         "action":"setOrder",
@@ -117,7 +125,7 @@ export const setOrderPhoto = async (id,files) => {
         "documents":files,
         token: token,
     })
-
+    console.log(data)
     return(data)
 }
 
@@ -127,6 +135,7 @@ export const getMyOrders = async () => {
         "action":"getMyOrders",
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -137,6 +146,7 @@ export const setCloseOrder = async (id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -147,6 +157,7 @@ export const setPublicOrder = async (id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -159,6 +170,7 @@ export const setReactionOrder = async (id, price, description) => {
         "executorText":description, 
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -170,6 +182,7 @@ export const setOrderExecutor = async (id, profileId) => {
         "profileId":profileId, 
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -181,7 +194,8 @@ export const offerOrder = async (id, profileId) => {
         "profileId":profileId, 
         token: token,
     })
-    return(data)
+    console.log(data.response)
+    return(data.response)
 }
 
 export const setAcceptOrder = async (id) => {
@@ -191,6 +205,7 @@ export const setAcceptOrder = async (id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -201,6 +216,7 @@ export const setExecutorCompleteOrder = async (id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -211,6 +227,7 @@ export const setDisputeOrder = async (id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }
 
@@ -223,5 +240,6 @@ export const setFeedbackOrder = async (rate, feedback, id) => {
         "orderId":id,
         token: token,
     })
+    console.log(data.response)
     return(data.response)
 }

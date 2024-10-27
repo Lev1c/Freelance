@@ -112,7 +112,7 @@ const Experience = observer((userProfile) => {
               </div>
             </div>
             :
-            <span className="mt">{t('profile.education.text-two')}</span>
+            <span className="mt">{t('profile.education.month.text-two')}</span>
           }
         </div>
       </div>

@@ -2,9 +2,6 @@
     .header-mobile-block-button {
         width: 15%;
     }
-    .container .filter-block {
-        display: none;
-    }
     .back-search {
         margin-top: 10px;
         position: absolute;
@@ -813,41 +810,9 @@
         margin-left: 40px;
     }
 }
-
-@media screen and (min-width: 768px) { 
-    .container .button-filter-mobile-three {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .header-mobile-block-button {
         width: 15%;
-    }
-    .container .portfolio {
-        margin-top: 80px;
-    }
-    .container .btn-feedback {
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        color: #FFFFFF;
-        background: #ED502E;
-        border-radius: 6px;
-        border: none;
-        padding: 15px;
-        width: 100%;
-        cursor: pointer;
-        margin-right: 25px;
-        transition: 0.1s;
-    }
-    .block-img-edit .button-edit-block {
-        width: 100%;
-        min-height: min-content;
-        height: auto;
-        padding: 0;
     }
     .mr-auth {
         margin-right: 10px;

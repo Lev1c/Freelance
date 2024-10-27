@@ -228,7 +228,7 @@ const Verif = () => {
   }
 
   if(response && response.status === true) {
-    window.location.replace('/profile/edit-executor')
+    window.location.replace('/profile/edit-customer')
   }
 
   return (

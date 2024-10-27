@@ -21,7 +21,7 @@ const ListUser = () => {
     const [displayCount, setDisplayCount] = useState(10);
 
     const [infoUserOne, setInfoUserOne] = useState()
-
+    console.log(infoUserOne)
 
     if (list && list === 403) {
         window.location.replace('/')
@@ -57,7 +57,6 @@ const ListUser = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-        // eslint-disable-next-line
       }, [displayCount, (list && list.users && list.users.length)]);
 
     return (
@@ -114,10 +113,10 @@ const ListUser = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Системная Роль</li> 
                                                 </div>
-                                                {res.systemRole === 1 && <li>Пользователь</li>}
-                                                {res.systemRole === 2 && <li>Кредитный менеджер</li>}
-                                                {res.systemRole === 3 && <li>Страховой менеджер</li>}
-                                                {res.systemRole === 4 && <li>Менеджер верификации</li>}
+                                                {res.systemRole === 1 && <li>пользователь</li>}
+                                                {res.systemRole === 2 && <li>кредитный менеджер</li>}
+                                                {res.systemRole === 3 && <li>страховой менеджер</li>}
+                                                {res.systemRole === 4 && <li>менеджер верификации</li>}
                                                 {res.systemRole === 5 && <li>Администратор</li>}
                                             </div>
                                         </div>

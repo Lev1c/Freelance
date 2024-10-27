@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 const ListUser = ({value, setValue, options, descriptionInfo, listUser}) => {
     const { t } = useTranslation();
     let list = descriptionInfo.order[0]
-
+    console.log(descriptionInfo.order[0].orderId)
     return (
       <div className="container">
         <div className="list-filter">
@@ -168,7 +168,7 @@ const ListUser = ({value, setValue, options, descriptionInfo, listUser}) => {
                                 {response.executorText}
                             </span>
                                 <div className='block-button-list-user'>
-                                    <button className='button-list-user' onClick={() => setOrderExecutor(descriptionInfo.order[0].orderId, response.profileId).then(() => {window.location.reload()})}>{t('edit.listUser.button-one')}</button>
+                                    <button className='button-list-user' onClick={() => setOrderExecutor(descriptionInfo.order[0].orderId, response.profileId)}>{t('edit.listUser.button-one')}</button>
                                     <button className='button-list-user-two' onClick={() => {
                                         offerOrder(descriptionInfo.order[0].orderId, response.profileId)
                                         .then(() => {window.location.replace('/chat')})

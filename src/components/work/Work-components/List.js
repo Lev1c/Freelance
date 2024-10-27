@@ -28,13 +28,10 @@ function List() {
     const [maxSearchPrice, setMaxSearchPrice] = useState('')
 
    //Поиск
-    const [search, setSearch] = useState('' || String(user && (user._idCategory && user._idCategory.length) && user._idCategory))
+    const [search, setSearch] = useState('' || String(user && user._idCategory && user._idCategory.length))
     if (search === 'undefined') {
       setSearch('')
     }
-
-
-    
     // list filter checkbox
     const [isProjectChecked, setIsProjectChecked] = useState(false);
     const [isVacancyChecked, setIsVacancyChecked] = useState(false);

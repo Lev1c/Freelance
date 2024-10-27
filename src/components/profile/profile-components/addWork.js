@@ -96,7 +96,7 @@ const AddWork = () => {
     if (reply && reply.response.status === true) {
       window.location.replace('/profile/edit-executor')
     }
-
+    console.log(selectedFile, preview, selectedFile2, preview2, selectedFile3, preview3)
     return (
       <div className="container">
           <div className="add-work">

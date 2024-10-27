@@ -9,8 +9,8 @@ export const ModalPortfolio = observer(({active, setActive,response}) => {
     const { t } = useTranslation();
     return (
         
-        <div className={active ? "login active" : "login"} key={response.portfolioId} onMouseDown={() => setActive(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={active ? "login active" : "login"} onClick={() => setActive(false)} key={response.portfolioId}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <div className='block-login-exit'>
                         <span>{response.nameProject}</span>

@@ -1,13 +1,23 @@
 import photo from '../../../assets/icon/Close_SM.png'
 
+import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
+import errors from '../../../assets/icon/error.png';
+import { useTranslation } from 'react-i18next';
 import { setUserUnLock } from '../../../http/adminApi';
 
 const ModaUnlLock = observer(({activeThree, setActiveThree, infoUserOne}) => {
+    const { t } = useTranslation();
+    const [login, setLogin] = useState("")
+    const [infoMes, setInfoMes] = useState('')
 
+    console.log(infoUserOne)
+
+
+   
     return (
-        <div className={activeThree ? "login active" : "login"} onMouseDown={() => setActiveThree(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={activeThree ? "login active" : "login"} onClick={() => setActiveThree(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
             <div className="login-text">
                     <span>Внимание</span>
                     <button 

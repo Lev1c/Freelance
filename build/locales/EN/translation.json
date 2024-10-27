@@ -1,0 +1,406 @@
+{
+  "header": {
+    "logo": "Logo",
+    "work": "Find a Job",
+    "create": "Post a Task",
+    "about": "About the Platform",
+    "how": "How It Works",
+    "login": "Login",
+    "or": "or",
+    "register": "Register",
+    "task": "My Tasks",
+    "lk" : "Personal Cabinet",
+    "message" : "Messages",
+    "uv": "Notifications",
+    "wallet" : "Wallet"
+  },
+  "home": {
+    "search": {
+      "main-text": "Find and hire specialists and experts from different fields",
+      "under-text": "Helping you find reliable performers for tasks of any complexity",
+      "button-main": "Find",
+      "main-search": "What needs to be done?",
+      "text-under": {
+        "or": "Or ",
+        "link-create": "post a task for free"
+      }
+    },
+    "statistics": {
+      "statistics-under-text": {
+        "one": "Performers",
+        "two": "Transactions conducted",
+        "three": "Payment made to performers",
+        "fo": "Satisfied customers"
+      }
+    },
+    "categories": {
+      "categories-main-text": "Freelancers by Categories",
+      "categories-under-text": {
+        "one": "Looking for work? Check out ",
+        "two": "job vacancies"
+      },
+      "feature": {
+        "one": "Computer Assistance",
+        "two": "Courier Services",
+        "three": "Repairs and Construction",
+        "fo": "Legal Services",
+        "five": "Cleaning and Household Assistance",
+        "six": "Virtual Assistant",
+        "seven": "Design",
+        "eight": "Software Development"
+      },
+      "categories-text-under": "View all categories"
+    },
+    "why": {
+      "why-main-text": "Why do thousands of people choose us?",
+      "why-li": {
+        "one": "Trust",
+        "two": "Secure payments",
+        "three": "Affordable services",
+        "fo": "Flexibility",
+        "five": "Support",
+        "six": "Arbitration"
+      },
+      "why-button": "Find a Specialist"
+    },
+    "work": {
+      "work-main-text": "How does the platform work?",
+      "work-description-one": {
+        "work-one-text": "Post a Task",
+        "work-two-text": "Post a task and start receiving responses within an hour"
+      },
+      "work-description-two": {
+        "work-one-text": "Choose a Performer",
+        "work-two-text": "Compare offers and select a verified performer"
+      },
+      "work-description-three": {
+        "work-one-text": "Make a Deal",
+        "work-two-text": "Choose when and how to pay and conclude a regular or business deal"
+      },
+      "work-description-fo": {
+        "work-one-text": "Pay for the Work",
+        "work-two-text": "Select a secure payment method and pay for the work upon completion"
+      }
+    }
+  },
+  "work": {
+    "list-task": {
+      "sort": [
+        {"id": 1, "name": "Fresh"},
+        {"id": 2, "name": "Old"},
+        {"id": 3, "name": "Expensive"},
+        {"id": 4, "name": "Cheap"}
+      ],
+      "seconds": ["seconds", "second", "seconds"],
+      "minutes": ["minute", "minutes", "minutes"],
+      "hours": ["hour", "hours", "hours"],
+      "back": "back",
+      "button-filter": "Filter",
+      "text-list-task": {
+        "one": "Found",
+        "two": "tasks"
+      },
+      "text-list-task-select": "Sort",
+      "list-task-numbering-navigation": {
+        "one": "Back",
+        "two": "Next"
+      }
+    },
+    "list-filter": {
+      "filter-text-main": "Filter",
+      "button-filter-mobile": "Hide",
+      "list-filter-work-text": "Task Type",
+      "label-radio": {
+        "one": "All",
+        "two": "Projects",
+        "three": "Job Vacancies"
+      },
+      "list-filter-work-text-two": "Payment Range",
+      "block-price-filter": {
+        "one": "from",
+        "two": "to"
+      },
+      "list-filter-work-text-three": "Task Categories",
+      "button-block-work": {
+        "one": "Hide All",
+        "two": "Show All"
+      },
+      "list-filter-work-text-fo": "City, Address, District...",
+      "button-where": "No cities found",
+      "remove-list-button": "Reset Filters"
+    },
+    "search": {
+      "work-search-text": "All Tasks",
+      "placeholder": "Search Projects",
+      "button-main": "Find"
+    }
+  },
+  "target": {
+    "target-back-one": "Task",
+    "target-back-two": "Proposals",
+    "description": {
+      "months": [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ],
+      "formattedDate": "In service since ",
+      "description-option-text": "Project Details",
+      "create-work": "Task created:",
+      "create-work-two": "| Needs to be done: ",
+      "hang": {
+        "title": "Features",
+        "one": "Contract Required. ",
+        "two": "Closing documents required from the Performer. ",
+        "three": "Insurance required. ",
+        "fo": "Credit required. "
+      },
+      "files": "Attached Files",
+      "moderatorComment": "Moderator's Comment: ",
+      "skills": "Required Skills",
+      "map": {
+        "tilte": "Work Location",
+        "one": "Remote",
+        "two": "On-site",
+        "three": "Address",
+        "fo": "Remote"
+      },
+      "pay": {
+        "title": "Payment Method",
+        "one": "Cash payment",
+        "two": "Non-cash",
+        "three": "Risk-free transaction"
+      },
+      "feedbacks": "Feedbacks",
+      "button-click": {
+        "one": "Make a Deal",
+        "two": "Publish Task",
+        "three": "Edit Task",
+        "fo": "Completed the Work",
+        "five": "Complete Task",
+        "six": "Leave Feedback",
+        "seven": "Respond to Task",
+        "eight": "Open Dispute"
+      },
+      "client": "About the Client"
+    }
+  },
+  "specialists": {
+    "list-spec": {
+      "filter": "Filter",
+      "text-list-task": {
+        "one": "Found:",
+        "two": "people"
+      },
+      "sort": "Sort -",
+      "years": {
+        "one": "year",
+        "two": "years",
+        "three": "years"
+      },
+      "offer": "Offer Project",
+      "back": "Back",
+      "forward": "Forward"
+    },
+    "list-filter": {
+      "filter": "Filter",
+      "button-filter-mobile": "Hide",
+      "category": "Categories",
+      "clickChange": {
+        "one": "Hide All",
+        "two": "Show All"
+      },
+      "map": {
+        "title": "Country, Region, City...",
+        "one": "Enter Country",
+        "two": "Enter Region",
+        "three": "Enter City"
+      },
+      "rate": "Rating",
+      "feedback": {
+        "title": "Feedback",
+        "one": "from",
+        "two": "to"
+      },
+      "online": {
+        "title": "Online",
+        "text": "Only those who are online"
+      },
+      "clear": "Clear Filter"
+    },
+    "modal": {
+      "one": "My Tasks",
+      "two": "User: ",
+      "three": "Offer Project"
+    },
+    "search": {
+      "title": "All Specialists",
+      "text-input": "Search Freelancers",
+      "button": "Find"
+    }
+  },
+  "create-work": {
+    "back": "Back",
+    "forward": "Forward",
+    "create-work": "Create",
+    "about": {
+      "title": "Job Description",
+      "title-two": "Indicate if you need any documents for your task. If not, skip this step.",
+      "input-text": "Enter job description",
+      "button-text": "Add attachment"
+    },
+    "create": {
+      "title": "Task Name and Category",
+      "input-text": "Enter task name",
+      "title-two": "Select category",
+      "link": "Didn't find your category?",
+      "title-three": "Tell us about your skills",
+      "block-text": "Skill not found",
+      "title-fo": "Task Type",
+      "title-five": "Job Vacancy",
+      "title-six": "Project (One-time work)"
+    },
+    "document": {
+      "title-one": "Documents",
+      "under-title-one": "Indicate if you need any documents for your task. If not, skip this step.",
+      "title-two": "Contract required",
+      "under-title-two": "A contract will be concluded with the Performer for the performance of the work",
+      "title-three": "Closing documents required",
+      "under-title-three": "The Performer will be required to provide invoices, receipts, and acts of completed work",
+      "title-fo": "Insurance required",
+      "under-title-fo": "An application will be submitted to the insurance company for insurance services"
+    },
+    "map": {
+      "title-one": "Task Location",
+      "title-two": "Remote work",
+      "title-three": "Presence at the address is required",
+      "text-input": "City",
+      "text-input-two": "Street, House",
+      "block-text": "No cities found"
+    },
+    "money": {
+      "title-one": "Budget and Payment",
+      "title-two": "Specify an approximate budget. The final cost can be discussed with the performer",
+      "one": "from",
+      "two": "to",
+      "under-title-one": "Payment type",
+      "under-title-two": "Payment method",
+      "radio-one": "Regular transaction",
+      "radio-two": "Risk-free transaction",
+      "radio-three": "Cash payment",
+      "radio-fo": "Non-cash payment"
+    },
+    "time": {
+      "title-one": "When do you need to start working?",
+      "title-two": "Specify the exact date or period when you need to start working.",
+      "text-one": "Start working from",
+      "text-two": "Finish by deadline",
+      "text-three": "Specify a period",
+      "text-fo": "Start working",
+      "text-five": "Finish working"
+    }
+  },
+  "register": {
+    "back": "Back",
+    "forward": "Next",
+    "title": "Registration",
+    "text-under-window": "Create a login and password",
+    "under-title": "Login",
+    "under-title-two": "Password",
+    "checkbox__label": "I agree to the privacy policy",
+    "button": "Register",
+    "have-acc": "Already have an account? ",
+    "button-under": "Log in",
+    "user": {
+      "title-one": "What is your name?",
+      "title-two": "Please use your real information for verification purposes",
+      "text-one": "Your first name",
+      "input-text": "Enter your first name",
+      "text-two": "Your last name",
+      "input-text-two": "Enter your last name",
+      "text-three": "Your middle name",
+      "input-text-three": "Enter your middle name (if any)",
+      "text-fo": "Date of birth",
+      "text-five": "Gender",
+      "gender-one": "Man",
+      "gender-two": "Woman"
+    },
+    "where": {
+      "title-one": "Where are you located",
+      "title-two": "Please use your actual address for verification",
+      "text-one": "Country",
+      "input-text": "Russia",
+      "text-two": "Region",
+      "input-text-two": "Leningrad Oblast",
+      "text-three": "City",
+      "input-text-three": "St. Petersburg",
+      "text-fo": "Registration address",
+      "input-text-fo": "Moscow, Pushkin Street 1, Apt. 1"
+    },
+    "email": {
+      "title-one": "Great, now you need to confirm your email",
+      "title-two": "A confirmation email will be sent to you",
+      "text-one": "Your email",
+      "input-text": "Enter your email",
+      "text-two": "Code from email",
+      "text-three": "Phone number",
+      "text-fo": "SMS code",
+      "button-one": "Confirm",
+      "button-two": "Get code"
+    }
+  },
+  "verif": {
+    "back": "Back",
+    "forward": "Next",
+    "post-button": "Submit for Verification",
+    "bank-details": {
+      "title-one": "Fill in Bank Details",
+      "text-one": "Bank BIC",
+      "input-text": "Enter Organization Name",
+      "text-two": "User's Account Number"
+    },
+    "legal": {
+      "title-one": "To Respond to a Task, Fill in the Data",
+      "title-two": "Select Legal Form",
+      "text-one": "Self-Employed Individual",
+      "text-two": "Individual Entrepreneur",
+      "text-three": "Limited Liability Company",
+      "text-fo": "Joint-Stock Company"
+    },
+    "modal": {
+      "title-one": "Information about Documents",
+      "text-one": "You can upload documents in the format The total volume of all submitted files should not exceed 10 megabytes.",
+      "text-two": "To avoid exceeding the specified volume, it is recommended to use the following parameters when scanning:",
+      "li-one": "resolution of 200 - 300 DPI (dots per inch);",
+      "li-two": "geometric dimensions of the image",
+      "li-three": "1024x768;",
+      "li-fo": "monochrome (black and white) image;",
+      "li-five": "use the following formats for saving:",
+      "li-six": "PDF, JPG, PNG, TIF ",
+      "under-text": "After scanning, it is recommended to view the resulting image at 100% scale to ensure that the text is readable"
+    },
+    "skills": {
+      "title-one": "Choose a Category",
+      "title-two": "Tell Us About Your Skills",
+      "text-one": "Didn't Find Your Section?",
+      "text-two": "Skill Not Found"
+    },
+    "upload": {
+      "title-one": "Upload Supporting Documents (for Individual Entrepreneurs)",
+      "title-two": "Upload the documents in the windows below. The total volume of all submitted files should not exceed 10 MB. For more detailed information, read ",
+      "text-one": "Passport Photo",
+      "text-two": "Selfie with Passport",
+      "text-three": "Certificate of Registration as an Individual Entrepreneur",
+      "text-fo": "Certificate of Registration with the Tax Committee",
+      "text-five": "Power of Attorney",
+      "button-open": " here"
+    },
+    "info": {
+      "title-one": "Fill in Legal Information",
+      "text-one": "Organization Name / Individual Entrepreneur Name or Full Name for Individuals and Self-Employed",
+      "input-text": "Enter Organization Name",
+      "text-two": "OGRNIP / Tax ID",
+      "text-three": "Legal Address",
+      "input-text-three": "Almaty, Abay Avenue 1, Apartment 1"
+    }
+  }
+}

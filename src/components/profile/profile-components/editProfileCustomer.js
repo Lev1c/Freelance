@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 
 const EditProfileCustomer = ({userProfile}) => {
   const { t } = useTranslation();
-
+  let infoUser = JSON.parse(localStorage.getItem('info'))
   const [modalActive, setModalActive] = useState(false)
   
   const [image, setImage] = useState(photo);
@@ -163,7 +163,7 @@ const EditProfileCustomer = ({userProfile}) => {
     await uploadCustomerDoc5(selectedFile5, preview5, typeOfDoc5)
     window.location.reload()
   }
-    
+    console.log(userProfile.response.customerProfile.moderatorComment.length)
     return (
       <>
       <div className="container">
@@ -176,15 +176,10 @@ const EditProfileCustomer = ({userProfile}) => {
                   <div>
                     <h1>{t('profile.editProfileCustomer.title')}</h1>
                     <Link className='button-title button-redirect' to={'/profile/edit-profile'}>{t('profile.editProfileCustomer.profile')}</Link>
-                    {userProfile && userProfile.response.profile.customerStatus === 1 ? 
-                      <Link className='button-title button-redirect link-red' to={'/profile/edit-customer'}>{t('profile.editProfile.profile-customer')}</Link>
+                    {infoUser.executerStatus === 1 ? 
+                      <Link className='button-title' to={'/profile/edit-executor'}>{t('profile.editProfile.profile-executor')}</Link>
                       :
-                      <Link className='button-title button-redirect-reg button-redirect' to={'/profile/verification/customer'}>{t('profile.editProfile.profile-customer')}</Link>
-                    }
-                    {userProfile && userProfile.response.profile.executerStatus === 1 ? 
-                      <Link className='button-title ' to={'/profile/edit-executor'}>{t('profile.editProfile.profile-executor')}</Link>
-                      :
-                      <Link className='button-title button-redirect-reg' to={'/profile/verification/executor'}>{t('profile.editProfile.profile-executor')}</Link>
+                      <></>
                     }
                   </div>
                 </div>
@@ -197,7 +192,7 @@ const EditProfileCustomer = ({userProfile}) => {
                       <>{t('profile.editProfileCustomer.text-two')}</>
                     }
                   </h3>
-                  {userProfile.response.customerProfile.moderatorComment && userProfile.response.customerProfile.moderatorComment.length > 0 &&
+                  {userProfile.response.customerProfile.moderatorComment.length > 0 &&
                     <span><h4 className='text-valid'>{t('profile.editProfileCustomer.text-three')}:</h4> {userProfile.response.customerProfile.moderatorComment}</span>
                   }
                 

@@ -27,7 +27,7 @@ const Main = () => {
     setSelectedValue('all')
     setSelectedValueTwo(value);
   };
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     getMyOrders().then(data => setWork(data))
@@ -36,12 +36,6 @@ const Main = () => {
 
   if (work && work === 403) {
       window.location.replace('/');
-  }
-
-  let infoUser = JSON.parse(localStorage.getItem('info'))
-
-  if (infoUser && infoUser.systemRole > 1) {
-    window.location.replace('/');
   }
 
    if (loading) {
@@ -61,7 +55,7 @@ const Main = () => {
   const handleCustomerClick = () => {
     setRole('customer');
   };
-  
+  let infoUser = JSON.parse(localStorage.getItem('info'))
     return (
       <div className="">
           <Search 

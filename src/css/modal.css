@@ -32,13 +32,16 @@
     font-size: 22px;
     line-height: 26px;
     color: #000101;
+    
     display: flex;
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+
     padding-bottom: 10px;
     border-bottom: 1px solid #DADAD9;
+    
     margin-bottom: 20px;
 }
 

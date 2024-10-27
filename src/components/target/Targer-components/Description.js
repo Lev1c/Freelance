@@ -13,7 +13,7 @@ import { Context } from '../../..'
 import Login from '../../modal/Login'
 import ResponseToTask from '../../modal/ResponseToTask'
 import { Link, useParams } from 'react-router-dom'
-import { setAcceptOrder, setCloseOrder, setExecutorCompleteOrder, setPublicOrder,setDisputeOrder, setOrderPhoto, deletePhoto } from '../../../http/orderApi'
+import { setAcceptOrder, setCloseOrder, setExecutorCompleteOrder, setPublicOrder,setDisputeOrder, setOrder, setOrderPhoto, deletePhoto } from '../../../http/orderApi'
 import { useTranslation } from 'react-i18next'
 
 
@@ -25,11 +25,9 @@ function Description({descriptionInfo}) {
     const {user} = useContext(Context)
 
     const [imgUsers, setImgUser] = useState()
-    const [active, setActive] = useState(false)
+  
     const [selectedFile, setSelectedFile] = useState();
     const [preview, setPreview] = useState();
-
-    const [descriptionOne, setDescriptionOne] = useState()
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -41,6 +39,7 @@ function Description({descriptionInfo}) {
             setPreview(base64String);
             const base64StringImg = reader.result;
             setImgUser(base64StringImg);
+            setOrderPhoto(id, [{nameFile: file.name,dataFile: base64String}]).then(() => window.location.reload())
           };
           reader.readAsDataURL(file);
         } else {
@@ -49,14 +48,6 @@ function Description({descriptionInfo}) {
         }
       };
 
-    const clickSend = () => {
-        if(!descriptionOne) {
-            setActive(true)
-        } else {
-            setOrderPhoto(id, [{nameFile: selectedFile,dataFile: preview, description: descriptionOne}]).then(() => window.location.reload())
-        }
-        
-    }
 
     let info = descriptionInfo && descriptionInfo.order[0]
     
@@ -185,7 +176,7 @@ function Description({descriptionInfo}) {
 
     const date = info.customerCreateDate;
     const formattedDate = formatDate(date);
-
+    console.log(formattedDate);
     return (
       <div className="container">
         <div className="description-option-mobile">
@@ -343,14 +334,11 @@ function Description({descriptionInfo}) {
                                 return (
                                     // eslint-disable-next-line
                                     <>
-                                    <span className='description-block-text-under-two button-download' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` 
-                                        // eslint-disable-next-line
-                                        +
-                                         `${res.pathFile}`, res.nameFile)}>
+                                    <span className='description-block-text-under-two button-download' key={res.idFile} onClick={() => downloadPhoto(`http://194.67.113.55/` + `${res.pathFile}`, res.nameFile)}>
                                         <img src={photo3} alt='.' width={24}/>
-                                        <button className='button-download'>{res.description}</button>
+                                        <button className='button-download'>{res.nameFile}</button>
                                     </span>
-                                    <button id='button-targer-delete' className='description-block-text-under-two button-delete' onClick={() => deletePhoto(res.idFile, id ).then(window.location.reload())}>x</button>
+                                    <button className='description-block-text-under-two button-delete' onClick={() => deletePhoto(res.idFile, id ).then(window.location.reload())}>x</button>
                                     </>
                                 )
                             })}
@@ -365,41 +353,24 @@ function Description({descriptionInfo}) {
                         (info.status <= 3 && (info.executor === -1 || info.customer === -1)) && (
                             <>      
                             <div className='block-img-edit target'>
-                                <div className="button-edit-block">
-                                    <label class="button-edit" id="butt">
-                                            <input type="file" name="file[]" onChange={handleFileChange}/>
-                                        {!preview && <div className='button-edit-photo'><img src={photo} alt='.' width={24}/>{t('create-work.about.button-text')}</div>}
-                                        {preview &&<img src={imgUsers} alt='.' id='phot' className='reg-user-img' width="183" height="auto"/>}
-                                        </label>
-                                    {preview && <p>{active === true ? "*" : ""}</p>}
-                                        <input 
-                                        className="input-date-input"
-                                        type="text" 
-                                        placeholder="Название"
-                                        value={descriptionOne}
-                                        setValue={descriptionOne}
-                                        onChange={(event)=> setDescriptionOne(event.target.value)}
-                                        />
-                                    <button className='button-list-user' id='button-list-user-id' onClick={clickSend}>
-                                        Опубликовать вложение
-                                    </button>
-                                   
-                                </div>
+                                <label class="button-edit">
+                                    <input type="file" name="file[]" onChange={handleFileChange}/>
+                                    {!preview && <div className='button-edit-photo'><img src={photo} alt='.' width={24}/>{t('create-work.about.button-text')}</div>}
+                                    {preview &&<img src={imgUsers} alt='.' id='phot' className='reg-user-img' width="auto" height={183}/>}
+                                </label>
                             </div>
                         </>
                           )}
                     {info.subCategory.length > 0 ? 
                         <>
                             <p className='description-block-text-main'>{t('target.description.skills')}</p>
-                            <div className="skills-block mt">
-                            {info.subCategory.map((response, index) => (
-                              <div key={index} className="skills-text">
-                                {response}
-                                
-                              </div>
-                            ))}
-                          </div>
-                            
+                            <ul className='description-block-ul'>
+                                {info.subCategory.map(response => {
+                                    return (
+                                        <li className='description-block-text-li'>{response}</li>
+                                    )
+                                })}
+                            </ul>
                         </>
                         :
                         ''
@@ -708,6 +679,12 @@ function Description({descriptionInfo}) {
                           </Link>
                         )}
                         {// eslint-disable-next-line
+                        ((info.customer === -1) || (info.executor === -1)) && (
+                            <Link to={'/target/edit/' + info.orderId} className='description-button-click-two'>
+                              Мои задания
+                            </Link>
+                          )}
+                        {// eslint-disable-next-line
                         (info.executor === -1 && info.status == 3) && (
                           <button className='description-button-click-three' onClick={() => {setExecutorCompleteOrder(id).then(() => window.location.reload())}}>
                             {t('target.description.button-click.fo')}
@@ -741,12 +718,6 @@ function Description({descriptionInfo}) {
                             {t('target.description.button-click.eight')}
                           </button>
                         )}
-                        {// eslint-disable-next-line
-                        ((info.customer === -1) || (info.executor === -1)) && (
-                            <Link to={'/task'} className='description-button-click-two'>
-                              Назад
-                            </Link>
-                          )}
                         </>
                         :
                         <></>
@@ -790,7 +761,7 @@ function Description({descriptionInfo}) {
                         )}
 
                         {// eslint-disable-next-line
-                        (info.customer === -1 && info.status == 0) && (
+                        (info.customer === -1 && (info.status == 0 || info.status == 2)) && (
                           <button className='description-button-click-three' onClick={() => {setPublicOrder(id).then(() => window.location.reload())}}>
                             {t('target.description.button-click.two')}
                           </button>
@@ -802,6 +773,14 @@ function Description({descriptionInfo}) {
                             {t('target.description.button-click.three')}
                           </Link>
                         )}
+
+                        {// eslint-disable-next-line
+                        ((info.customer === -1) || (info.executor === -1)) && (
+                            <Link to={'/task'} className='description-button-click-two'>
+                              Мои задания
+                            </Link>
+                          )}
+
                         {// eslint-disable-next-line
                         (info.executor === -1 && info.status == 3) && (
                           <button className='description-button-click-three' onClick={() => {setExecutorCompleteOrder(id).then(() => window.location.reload())}}>
@@ -836,12 +815,6 @@ function Description({descriptionInfo}) {
                             {t('target.description.button-click.eight')}
                           </button>
                         )}
-                        {// eslint-disable-next-line
-                        ((info.customer === -1) || (info.executor === -1)) && (
-                            <Link to={'/task'} className='description-button-click-two'>
-                              Назад
-                            </Link>
-                          )}
                         </>
                         :
                         <></>

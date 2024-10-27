@@ -2,15 +2,15 @@ import photo from '../../../assets/icon/Close_SM.png'
 
 import React from 'react';
 import {observer} from "mobx-react-lite";
-import { useTranslation } from "react-i18next";
+
 
 const ModalWar = observer(({modalActive, setModalActive}) => {
-    const { t } = useTranslation();
+    
     return (
-        <div className={modalActive ? "login active" : "login"} onMouseDown={() => setModalActive(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={modalActive ? "login active" : "login"} onClick={() => setModalActive(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
-                    <span>{t('verif.modal.title-one')}</span>
+                    <span>Внимание</span>
                     <button 
                         onClick={() => setModalActive(false)} 
                         className='button-login-modal'
@@ -21,17 +21,10 @@ const ModalWar = observer(({modalActive, setModalActive}) => {
                 <span></span>
                     
                 <div className="login-input mt-15">
-                    <p>{t('verif.modal.text-one')}</p>
-                    <p className='mt-15'>{t('verif.modal.text-two')}</p>
-                    <ul className='ul-modal-verif'>
-                        <li>{t('verif.modal.li-one')} </li>
-                        <li>{t('verif.modal.li-two')}</li>
-                        <li>{t('verif.modal.li-three')}</li>
-                        <li>{t('verif.modal.li-fo')}</li>
-                        <li>{t('verif.modal.li-five')}</li>
-                        <li>{t('verif.modal.li-six')}</li>
-                    </ul>
-                    <p className='mt-15'>{t('verif.modal.under-text')}</p>
+                    <p>После замены ФИО мы заново попросим вас пройти верификацию</p>
+                </div>
+                <div className='button-block-login mt-15'>
+                    <button className='login-button verif-button' onClick={() => setModalActive(false)} >Ок</button>
                 </div>
             </div>
         </div>

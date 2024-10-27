@@ -109,7 +109,7 @@ function Education(userProfile) {
               </div>
             </div>
             :
-            <span className="mt-15">{t('profile.education.text')}</span>
+            <span className="mt-15">{t('profile.education.month.text')}</span>
           }
           </div>
         </div>

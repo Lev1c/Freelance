@@ -64,14 +64,17 @@ function List() {
           setTaskCategories(updatedFilterTypeOrder);
         }
     };
+    const getInfoUser = JSON.parse(localStorage.getItem('info'))
+    console.log(getInfoUser)
+    
 
     useEffect(() => {
-        getExecutorList(search, filterSubCategory, taskCategories,filterCountFeedbackStart,filterCountFeedbackEnd,filterRate,listCityId, online)
+        getExecutorList(filterSubCategory, taskCategories,filterCountFeedbackStart,filterCountFeedbackEnd,filterRate,listCityId, online)
         .then(data => setWork(data))
         getCountry()
         .then(country => setListCountry(country))
         .then(() => setLoading(false))
-    }, [search, filterSubCategory, taskCategories,filterCountFeedbackStart,filterCountFeedbackEnd,filterRate,listCityId, online])
+    }, [filterSubCategory, taskCategories,filterCountFeedbackStart,filterCountFeedbackEnd,filterRate,listCityId, online])
     
     useEffect(() => {
       getTaskCategories().then(categories => setGetTaskCategories(categories))
@@ -80,6 +83,7 @@ function List() {
     const options = arOptions.map((text, index) => {
          return <option key={index}>{text}</option>;
     })
+
    
     let listWork = work
     
@@ -117,6 +121,11 @@ function List() {
     //вывод страницы
     const currentCounrty = listWork && listWork.slice(firstCounrtyIndex, lastCountryIndex)
 
+    console.log(currentCounrty)
+    console.log(firstCounrtyIndex)
+    
+
+    
 
     // пагинация
     const pageNumbers = []

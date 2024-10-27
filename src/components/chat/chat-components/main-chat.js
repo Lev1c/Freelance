@@ -10,11 +10,10 @@ const MainChat = observer(() => {
     const [activeChatMobile, setActiveChatMobile] = useState(false)
 
     const [loading, setLoading] = useState(true)
-    const [search, setSearch] = useState()
 
     useEffect(() => {
       const fetchMessages = async () => {
-        getChatList(search)
+        getChatList()
         .then(data => setChatLists(data))
         .finally(() => setLoading(false))
       }
@@ -22,7 +21,7 @@ const MainChat = observer(() => {
       const interval = setInterval(fetchMessages, 3000);
 
       return () => clearInterval(interval);
-    }, [search])
+    }, [])
 
     const [chatId, setChatId] = useState('')
 
@@ -58,12 +57,8 @@ const MainChat = observer(() => {
       };
       // eslint-disable-next-line
     }, [chatId, lastFetchedChatId]);
-
-    let infoUsers = JSON.parse(localStorage.getItem('info'))
     
-    if (infoUsers && infoUsers.systemRole > 1) {
-      window.location.replace('/');
-    }
+    
 
     if(chatLists && chatLists === 403) {
       window.location.replace('/')
@@ -140,9 +135,7 @@ const MainChat = observer(() => {
             setLoadingChat={setLoadingChat}
             setChatMessages={setChatMessages}
             chatMessages={chatMessages}
-            loadingChat={loadingChat}
-            search={search}
-            setSearch={setSearch}
+            loadingChat={loadingChat}   
           />
           <div className={activeChatMobile === false ? "button-back-chat" : "button-back-chat active"} >
             <button onClick={clickTwo} className="back-chat-button">

@@ -30,8 +30,8 @@ const ChangePass = observer(({activeTwo, setActiveTwo, setActive}) => {
     }
    
     return (
-        <div className={activeTwo ? "login active" : "login"} onMouseDown={() => setActiveTwo(false)}>
-            <div className="login-block" onMouseDown={(e) => e.stopPropagation()}>
+        <div className={activeTwo ? "login active" : "login"} onClick={() => setActiveTwo(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
                 <div className="login-text">
                     <span>{t('modal.changePass.button-one')}</span>
                     <button 

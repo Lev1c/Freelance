@@ -31,14 +31,15 @@
     cursor: pointer;
 }
 
-.feature:hover {
-    background: #ececec;
-    transition: 0.1s;
-}
-
 .feature:first-child{
     margin-left: 0px;
 }
+
+.feature:nth-child(4), :nth-child(8) {
+    margin-right: 0px;
+}
+
+
 
 .categories-main {
     font-family: 'Gilroy';

@@ -53,7 +53,7 @@ function Create({setTypeOrder,changeFruit,listWord,setWords, name, setName, inpu
                           onBlur={onBlur}
                           onClick={() => changeOne()} 
                         />
-                        {inputValue && inputValue.length > 0 &&
+                        {inputValue.length > 0 &&
                         <div className={active ? "active" : "login"} onClick={() => setActive(false)}>
                           <div className="counrty-block" onClick={(e) => e.stopPropagation()}>
                             {listWord && listWord.length ? (

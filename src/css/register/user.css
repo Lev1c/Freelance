@@ -3,14 +3,6 @@
     display: flex;
 }
 
-.reg-user-img-two {
-    margin: auto;
-    display: flex;
-    max-width: 200px;
-    max-height: 200px;
-}
-
-
 .user-search {
     width: 96%;
     background: #F4F4F4;

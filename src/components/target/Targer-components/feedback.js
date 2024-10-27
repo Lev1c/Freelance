@@ -25,7 +25,7 @@ const FeedBack = () => {
     return (
       <div className="target">
       <div className="target-back">
-        <div className="none-mt container">
+        <div className="container">
           <p className="target-text">{t('target.feedback.title')}</p>
         </div>
       </div>

@@ -21,27 +21,27 @@ const Upload = ({handleFileChange,imgUsers,preview, handleFileChange2,imgUsers2,
               <label class="block-button-upload">
 	              <input type="file" name="file[]" onChange={handleFileChange}/>
                 {!preview && <div className='button-label' onMouseEnter={() => setImage(photo2)} onMouseLeave={() => setImage(photo)}><img src={image} alt='.' width={24}/>{t('verif.upload.text-one')}</div>}
-                {preview &&<img src={imgUsers} alt='.' id='phot' className='reg-user-img-two '  height="auto"/>}
+                {preview &&<img src={imgUsers} alt='.' id='phot' className='reg-user-img' width={183} height="auto"/>}
  	            </label>
              <label class="block-button-upload">
 	              <input type="file" name="file[]" onChange={handleFileChange2}/>
                 {!preview2 && <div className='button-label' onMouseEnter={() => setImage2(photo2)} onMouseLeave={() => setImage2(photo)}><img src={image2} alt='.' width={24}/>{t('verif.upload.text-two')}</div>}
-                {preview2 &&<img src={imgUsers2} alt='.' id='phot' className='reg-user-img-two '  height="auto"/>}
+                {preview2 &&<img src={imgUsers2} alt='.' id='phot' className='reg-user-img' width={183} height="auto"/>}
  	            </label>
               <label class="block-button-upload">
 	              <input type="file" name="file[]" onChange={handleFileChange3}/>
                 {!preview3 && <div className='button-label' onMouseEnter={() => setImage3(photo2)} onMouseLeave={() => setImage3(photo)}><img src={image3} alt='.' width={24}/>{t('verif.upload.text-three')}</div>}
-                {preview3 &&<img src={imgUsers3} alt='.' id='phot' className='reg-user-img-two '  height="auto"/>}
+                {preview3 &&<img src={imgUsers3} alt='.' id='phot' className='reg-user-img' width={183} height="auto"/>}
  	            </label>
               <label class="block-button-upload">
 	              <input type="file" name="file[]" onChange={handleFileChange4}/>
                 {!preview4 && <div className='button-label' onMouseEnter={() => setImage4(photo2)} onMouseLeave={() => setImage4(photo)}><img src={image4} alt='.' width={24}/>{t('verif.upload.text-fo')}</div>}
-                {preview4 &&<img src={imgUsers4} alt='.' id='phot' className='reg-user-img-two '  height="auto"/>}
+                {preview4 &&<img src={imgUsers4} alt='.' id='phot' className='reg-user-img' width={183} height="auto"/>}
  	            </label>
               <label class="block-button-upload">
 	              <input type="file" name="file[]" onChange={handleFileChange5}/>
                 {!preview5 && <div className='button-label' onMouseEnter={() => setImage5(photo2)} onMouseLeave={() => setImage5(photo)}><img src={image5} alt='.' width={24}/>{t('verif.upload.text-five')}</div>}
-                {preview5 &&<img src={imgUsers5} alt='.' id='phot' className='reg-user-img-two '  height="auto"/>}
+                {preview5 &&<img src={imgUsers5} alt='.' id='phot' className='reg-user-img' width={183} height="auto"/>}
  	            </label>
             </div>
         </div>

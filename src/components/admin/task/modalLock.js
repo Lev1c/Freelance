@@ -1,14 +1,23 @@
 import photo from '../../../assets/icon/Close_SM.png'
 
+import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
-import { setTaskCategoriesModerate} from '../../../http/adminApi';
+import errors from '../../../assets/icon/error.png';
+import { useTranslation } from 'react-i18next';
+import { setTaskCategoriesModerate, setUserLock } from '../../../http/adminApi';
 
 const ModalLock = observer(({activeTwo, setActiveTwo, infoUserOne}) => {
+    const { t } = useTranslation();
+    const [login, setLogin] = useState("")
+    const [infoMes, setInfoMes] = useState('')
+
+    console.log(infoUserOne)
+
 
    
     return (
-        <div className={activeTwo ? "login active" : "login"} onMouseDown={() => setActiveTwo(false)}>
-            <div className="login-block" onMouseDown={e => e.stopPropagation()}>
+        <div className={activeTwo ? "login active" : "login"} onClick={() => setActiveTwo(false)}>
+            <div className="login-block" onClick={e => e.stopPropagation()}>
             <div className="login-text">
                     <span>Внимание</span>
                     <button 
