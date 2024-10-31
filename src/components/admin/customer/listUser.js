@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCustomers, getUsersAdm } from "../../../http/adminApi";
+import { getCustomers } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -62,6 +62,7 @@ const ListUserCustomer = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
+        // eslint-disable-next-line
       }, [displayCount, (list && list.customers && list.customers.length)]);
 
     return (
@@ -118,12 +119,18 @@ const ListUserCustomer = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">тип Заказчика</li> 
                                                 </div>
-                                                {res.typeCustomer == 0 && <li>тип Заказчика</li>}
-                                                {res.typeCustomer == 1 && <li>Самозанятый</li>}
-                                                {res.typeCustomer == 2 && <li>ИП</li>}
-                                                {res.typeCustomer == 3 && <li>ООО</li>}
-                                                {res.typeCustomer == 4 && <li>АО</li>}
-                                                {res.typeCustomer == 5 && <li>Физическое лицо</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 0 && <li>тип Заказчика</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 1 && <li>Самозанятый</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 2 && <li>ИП</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 3 && <li>ООО</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 4 && <li>АО</li>}
+                                                {// eslint-disable-next-line
+                                                res.typeCustomer == 5 && <li>Физическое лицо</li>}
                                             </div>
                                         </div>
                                         <div className="block-list-user">
@@ -165,8 +172,10 @@ const ListUserCustomer = () => {
                                              <div className="block-list-user-about">
                                                  <li className="block-list-user-about-l">Аккаунт верифицирован</li> 
                                              </div>
-                                             {res.validateAccount == 1 && <li>Да</li>}
-                                            {res.validateAccount == 0 && <li>Нет</li>}
+                                            {// eslint-disable-next-line
+                                            res.validateAccount == 1 && <li>Да</li>}
+                                            {// eslint-disable-next-line
+                                            res.validateAccount == 0 && <li>Нет</li>}
                                          </div>
                                          <div className="block-list-card">
                                              <div className="block-list-user-about">

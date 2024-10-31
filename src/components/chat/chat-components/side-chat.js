@@ -15,6 +15,7 @@ const SideChat = observer(({
         setInfoUser
     }) => {
         const [selectedValue, setSelectedValue] = useState('all');
+        // eslint-disable-next-line
   const [selectedValueTwo, setSelectedValueTwo] = useState('all');
 
   const handleButtonClick = (value) => {

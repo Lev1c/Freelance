@@ -3,7 +3,6 @@ import arrowLeftS from '../../assets/icon/Arrow_Left_S.png'
 import arrowLeftR from '../../assets/icon/Arrow_Left_R.png'
 import arrowLeftSM from '../../assets/icon/Arrow_Left_SM.png'
 import arrowLeftSr from '../../assets/icon/Arrow_Left_Sr.png'
-import Arrow_Left_SMm from '../../assets/icon/Arrow_Left_SMm.png'
 import Create from "./create-components/Create";
 import Map from "./create-components/Map";
 import Time from "./create-components/Time";

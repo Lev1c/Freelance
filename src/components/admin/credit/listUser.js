@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCreditRequests, getUsersAdm } from "../../../http/adminApi";
+import { getCreditRequests } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -65,6 +65,7 @@ const ListUserCredit = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
+        // eslint-disable-next-line
       }, [displayCount, (list && list.creditRequests && list.creditRequests.length)]);
     return (
       <div className="">
@@ -160,8 +161,9 @@ const ListUserCredit = () => {
                                                 <div className="block-list-user-about">
                                                     <li className="block-list-user-about-li">Профиль Заказчика</li> 
                                                 </div>
-                                                <li>
+                                                <li>{// eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/customer/" + res.customerProfileId} target="_blank">Перейти</a>
+                                                    }
                                                 </li>
                                             </div>
                                             <div className="block-list-card">
@@ -169,8 +171,10 @@ const ListUserCredit = () => {
                                                     <li className="block-list-user-about-li">Профиль Исполнителя</li> 
                                                 </div>
                                                 <li>
+                                                    {// eslint-disable-next-line
                                                     <a className="link-format-message" href={"/profile/executor/" + res.executorProfileId} target="_blank">Перейти</a>
-                                                </li>
+                                                    }
+                                                    </li>
                                             </div>
                                             <div className="block-list-card">
                                                 <div className="block-list-user-about">
@@ -302,7 +306,8 @@ const ListUserCredit = () => {
                                         }
                                         </div>
                                         <div className="button-action-list-adm">
-                                            {res.needCredit == 2 ? 
+                                            {// eslint-disable-next-line
+                                            res.needCredit == 2 ? 
                                             ""
                                             :
                                             <button className="button-action-adm" onClick={() => {

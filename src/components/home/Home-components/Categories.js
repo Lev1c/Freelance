@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import exnernalink from '../../../assets/icon/External_Link.png'
 import { useTranslation } from 'react-i18next';
 import { useContext, useEffect, useState } from 'react';
 import { getTaskCategories } from '../../../http/userAPI';
@@ -13,6 +12,7 @@ function Categories() {
     console.log(user)
     const navigate = useNavigate();
     const [category, setCategory] = useState()
+    // eslint-disable-next-line
     const [taskCategories, setTaskCategories] = useState()
 
     useEffect(() => {

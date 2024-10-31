@@ -12,12 +12,15 @@
     "lk" : "Personal Cabinet",
     "message" : "Messages",
     "uv": "Notifications",
-    "wallet" : "Wallet"
+    "wallet" : "Wallet",
+    "read0": "Unread",
+    "read1": "Read",
+    "link":"Go to"
   },
   "home": {
     "search": {
-      "main-text": "Find and hire specialists and experts from different fields",
-      "under-text": "Helping you find reliable performers for tasks of any complexity",
+      "main-text": "Find the job of your dreams for every taste",
+      "under-text": "We'll help you choose tasks according to your skills",
       "button-main": "Find",
       "main-search": "What needs to be done?",
       "text-under": {
@@ -127,7 +130,8 @@
       },
       "list-filter-work-text-fo": "City, Address, District...",
       "button-where": "No cities found",
-      "remove-list-button": "Reset Filters"
+      "remove-list-button": "Reset Filters",
+      "input-text": "tenge"
     },
     "search": {
       "work-search-text": "All Tasks",
@@ -158,7 +162,7 @@
       "moderatorComment": "Moderator's Comment: ",
       "skills": "Required Skills",
       "map": {
-        "tilte": "Work Location",
+        "title": "Work Location",
         "one": "Remote",
         "two": "On-site",
         "three": "Address",
@@ -182,6 +186,13 @@
         "eight": "Open Dispute"
       },
       "client": "About the Client"
+    },
+    "feedback": {
+      "title": "Feedback for the performer's work",
+      "text-one": "Feedback text",
+      "text-input-one": "Enter your feedback here",
+      "text-two": "Rating",
+      "button": "Submit feedback"
     }
   },
   "specialists": {
@@ -267,7 +278,9 @@
       "title-three": "Closing documents required",
       "under-title-three": "The Performer will be required to provide invoices, receipts, and acts of completed work",
       "title-fo": "Insurance required",
-      "under-title-fo": "An application will be submitted to the insurance company for insurance services"
+      "under-title-fo": "An application will be submitted to the insurance company for insurance services",
+      "title-five": "Need a loan to pay",
+      "under-title-five": "An application will be generated for the company providing insurance services"
     },
     "map": {
       "title-one": "Task Location",
@@ -401,6 +414,252 @@
       "text-two": "OGRNIP / Tax ID",
       "text-three": "Legal Address",
       "input-text-three": "Almaty, Abay Avenue 1, Apartment 1"
+    }
+  },
+  "profile": {
+    "profile-user": {
+      "offline": "Offline",
+      "online": "Online",
+      "edit": "Edit Profile",
+      "done": "Done",
+      "rate": "reviews",
+      "task": " tasks",
+      "task-array": [
+        "s",
+        "s",
+        "s"
+      ]
+    },
+    "addWork": {
+      "title": "Add Work to Portfolio",
+      "text-one": "Project Name",
+      "text-two": "Project Description",
+      "input-text-two": "Describe the project, what you have done, how you did it, etc.",
+      "files": "Files",
+      "files-two": " (formats: JPG, PNG)",
+      "add-photo": "Add Attachment",
+      "save": "Save"
+    },
+    "comment": {
+      "title": "Reviews",
+      "text": "No reviews yet",
+      "button-one": "Hide All",
+      "button-two": "View All"
+    },
+    "editProfile": {
+      "title": "Edit Profile",
+      "profile-customer": "Customer Profile",
+      "profile-executor": "Executor Profile",
+      "logOut": "Logout",
+      "text-one": "Your Name",
+      "text-input-one": "Enter your name",
+      "text-two": "Your Surname",
+      "text-input-two": "Enter your surname",
+      "text-three": "Your Patronymic",
+      "text-input-three": "Enter your patronymic (if any)",
+      "text-fo": "Date of Birth",
+      "text-five": "Gender",
+      "gender-one": "Male",
+      "gender-two": "Female",
+      "text-six": "Login",
+      "text-seven": "Password",
+      "text-eight": "Confirm Password",
+      "photo": "Photo "
+    },
+    "editProfileCustomer": {
+      "title": "Edit Customer Profile",
+      "profile": "Profile",
+      "status": "Status",
+      "text-one": "Awaiting Verification",
+      "text-two": "Executor Profile and Documents Verified",
+      "text-three": "Comment",
+      "text-fo": "Legal Information",
+      "text-five": "Organization Name / Full Name (For self-employed)",
+      "text-six": "Bank Details"
+    },
+    "editProfileExecutor": {
+      "title": "Edit Executor Profile",
+      "profileCustomer": "Customer Profile",
+      "text-one": "Executor Profile and Documents Verified",
+      "text-two": "Specialization",
+      "text-input-two": "Web Developer",
+      "text-three": "About Yourself",
+      "text-input-three": "Tell about your skills, abilities, and experience. Also, describe the services you provide and any information that you think represents you as a specialist."
+    },
+    "editWork": {
+      "title": "Edit Entry"
+    },
+    "education": {
+      "title": "Education",
+      "monthNames": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "month": {
+        "one": "month",
+        "two": "months",
+        "three": "months"
+      },
+      "text-two": "You have not added your experience yet",
+      "text": "You have not added your education yet",
+      "add": "Add",
+      "edit": "Edit",
+      "title-two": "Add Education",
+      "text-input-one": "Education Name",
+      "text-input-two": "Specialty on Diploma/Document",
+      "text-input-three": "Start Date",
+      "text-input-fo": "End Date",
+      "title-three": "Edit Education",
+      "delete": "Delete"
+    },
+    "experience": {
+      "title": "Experience",
+      "title-two": "Add Work Experience",
+      "text-input-one": "Experience Name",
+      "text-input-two": "Specify your work experience",
+      "text-input-three": "Start Date",
+      "text-input-fo": "End Date",
+      "add": "Add",
+      "title-three": "Edit Work Experience",
+      "delete": "Delete"
+    },
+    "portfolio": {
+      "title": "Edit Entry",
+      "title-two": "Portfolio",
+      "text": "Add Work"
+    },
+    "side": {
+      "text-one": "In the service of",
+      "title": "Verification",
+      "text-two": "Phone",
+      "button-one": "Confirm",
+      "text-three": "Email",
+      "text-fo": "Documents",
+      "text-five": "Awards"
+    }
+  },
+  "wallet": {
+    "wallet-balnce": {
+      "text-one": "Your balance",
+      "text-two": "Top up",
+      "text-three": "Amount"
+    },
+    "history": {
+      "text-one": "All transactions",
+      "text-two": "Top-ups",
+      "text-three": "Withdrawals",
+      "button-one": "View all",
+      "button-two": "Hide all",
+      "title": "Transaction History"
+    },
+    "rate": {
+      "title": "Tariff",
+      "text-one": "No paid tariff",
+      "text-two": "Basic",
+      "text-three": "Unlimited",
+      "text-fo": "Remaining bids",
+      "text-five": "Subscription valid until",
+      "button": "Select tariff"
+    },
+    "buy": {
+      "title-one": "Cost",
+      "title-two": "Your balance",
+      "button": "Pay"
+    }
+  },
+  "chat": {
+    "side-chat": {
+      "text-one": "Open",
+      "text-two": "Completed",
+      "text-three": "Archive"
+    },
+    "chat-message": {
+      "link": "Go to",
+      "offline": "Offline",
+      "online": "Online",
+      "text-one": "Go to order",
+      "text-two": "Report"
+    }
+  },
+  "task": {
+    "search": {
+      "title": "My Tasks",
+      "text-one": "I am a Customer",
+      "text-two": "I am an Executor"
+    },
+    "list": {
+      "text-one": "All",
+      "text-two": "Published",
+      "text-three": "Completed",
+      "text-fo": "Archive",
+      "text-five": "Disputes",
+      "text-six": "Open",
+      "text-seven": "Closed",
+      "text-info-one": "Draft",
+      "text-info-two": "Published",
+      "text-info-three": "Executor Selected",
+      "text-info-fo": "Deal Confirmed",
+      "text-info-five": "Finished",
+      "text-info-six": "Disputes"
+    }
+  },
+  "edit": {
+    "title": "Edit Task",
+    "save": "Save",
+    "close": "Close Task",
+    "listUser": {
+      "title": "Responses",
+      "text-one": "Cost",
+      "button-one": "Select as Executor",
+      "button-two": "Write in Chat"
+    },
+    "editTask": {
+      "text-one": "Task Title and Category",
+      "text-input-one": "Title",
+      "text-input-two": "Keywords",
+      "text-three": "Task Type",
+      "text-three-one": "Vacancy",
+      "text-three-two": "Project (one-time work)",
+      "text-fo": "Task Title and Category",
+      "text-fo-one": "Remote work",
+      "text-fo-two": "Presence required at address",
+      "text-five": "City",
+      "text-five-one": "Cities not found",
+      "text-five-two": "street, house"
+    }
+  },
+  "modal": {
+    "login": {
+      "title": "Login to Personal Account",
+      "text-input-one": "Login",
+      "text-input-two": "Password",
+      "button-one": "Forgot password?",
+      "button-two": "Log In",
+      "link": "Registration",
+      "text": "Don't have an account? "
+    },
+    "changePass": {
+      "button-one": "Reset Password",
+      "text-one": "Please provide the email address you used during registration. We will send you instructions on how to reset your password.",
+      "input-text-one": "Email",
+      "link": "Log In"
+    },
+    "toTask": {
+      "title": "Respond to Task",
+      "text-one": "Service Cost",
+      "text-two": "Response Text",
+      "input-text": "Specify your work experience, tell why you should be the one to perform this task",
+      "button": "Send"
     }
   }
 }

@@ -69,7 +69,7 @@ const ChatMessage = observer(({
     };
 
     const months = month;
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    
 
     const formatMessage = (message) => {
         const downloadPhoto = (url, name) => {
@@ -98,7 +98,9 @@ const ChatMessage = observer(({
             const fileExtension = fileExtensions.find(ext => part.toLowerCase().endsWith(`.${ext}`));
             if (fileExtension) {
               return (
-                <span className='download-photo-chat'onClick={() => downloadPhoto(`http://194.67.113.55/` + `${message}`, 'file')}>
+                <span className='download-photo-chat'onClick={() => downloadPhoto(`http://194.67.113.55/` 
+                // eslint-disable-next-line
+                + `${message}`, 'file')}>
                     <img src={photo3} alt='.' width={24} className="mr-5"/>    
                     {message}
                 </span>
@@ -131,10 +133,11 @@ const ChatMessage = observer(({
         };
         // eslint-disable-next-line
       }, []); 
-
-      const [imgUsers, setImgUser] = useState()
-  
+      // eslint-disable-next-line
+    const [imgUsers, setImgUser] = useState()
+      // eslint-disable-next-line
     const [selectedFile, setSelectedFile] = useState();
+    // eslint-disable-next-line
     const [preview, setPreview] = useState();
 
     const handleFileChange = (event) => {

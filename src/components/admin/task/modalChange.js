@@ -2,19 +2,14 @@ import photo from '../../../assets/icon/Close_SM.png'
 
 import React, { useState} from 'react';
 import {observer} from "mobx-react-lite";
-import errors from '../../../assets/icon/error.png';
-import { useTranslation } from 'react-i18next';
-import { changeSubTaskCategories, changeTaskCategories, setUserModeratorComment } from '../../../http/adminApi';
+
+import { changeSubTaskCategories } from '../../../http/adminApi';
 
 const ModalChange = observer(({activeEight, setActiveEight, infoUserThree}) => {
-    const { t } = useTranslation();
+    
+
     const [login, setLogin] = useState("")
-    const [infoMes, setInfoMes] = useState('')
 
-    console.log(infoUserThree)
-
-
-   
     return (
         <div className={activeEight ? "login active" : "login"} onClick={() => setActiveEight(false)}>
             <div className="login-block" onClick={e => e.stopPropagation()}>

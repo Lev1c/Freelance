@@ -1,20 +1,14 @@
 import photo from '../../../assets/icon/Close_SM.png'
 
-import React, { useState} from 'react';
+import React from 'react';
 import {observer} from "mobx-react-lite";
-import errors from '../../../assets/icon/error.png';
 import { useTranslation } from 'react-i18next';
-import { removeSubTaskCategories, setTaskCategoriesModerate, setUserLock } from '../../../http/adminApi';
+import { removeSubTaskCategories } from '../../../http/adminApi';
 
 const ModalDelete = observer(({activeSeven, setActiveSeven, infoUserThree}) => {
+    // eslint-disable-next-line
     const { t } = useTranslation();
-    const [login, setLogin] = useState("")
-    const [infoMes, setInfoMes] = useState('')
 
-    console.log(infoUserThree)
-
-
-   
     return (
         <div className={activeSeven ? "login active" : "login"} onClick={() => setActiveSeven(false)}>
             <div className="login-block" onClick={e => e.stopPropagation()}>

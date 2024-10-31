@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCreditRequests, getInsuranceRequests, getSettings, getUsersAdm } from "../../../http/adminApi";
+import { getSettings } from "../../../http/adminApi";
 import ModalLock from "./modalLock";
 import ModaUnlLock from "./modalUnLock";
 import ModalComment from "./modalComment";
@@ -59,6 +59,7 @@ const Settings = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
+        // eslint-disable-next-line
       }, [displayCount, (list && list.settings && list.settings.length)]);
 
     return (
